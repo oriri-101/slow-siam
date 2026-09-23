@@ -341,8 +341,13 @@ section{padding:110px 0 14px;position:relative;}
 .spot-row{display:grid;grid-template-columns:250px 1fr;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .35s ease,transform .35s ease,border-color .35s ease;}
 .spot-row:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px);border-color:var(--line-strong);}
 @media(max-width:720px){.spot-row{grid-template-columns:1fr;}}
-.spot-media{position:relative;min-height:100%;background-size:cover;background-position:center;background-color:var(--bg-alt);}
+.spot-media{position:relative;min-height:100%;background-size:cover;background-position:center;background-color:var(--bg-alt);background-image:linear-gradient(135deg,var(--bg-alt),var(--card));}
 @media(max-width:720px){.spot-media{min-height:190px;}}
+.img-fail-icon{display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:var(--ink-faint);pointer-events:none;}
+.img-fail-icon svg{width:26px;height:26px;opacity:.45;}
+.tl-spot-thumb .img-fail-icon svg{width:15px;height:15px;}
+.spot-media.img-fail,.tl-spot-thumb.img-fail{background-image:linear-gradient(135deg,var(--bg-alt),var(--card))!important;}
+.spot-media.img-fail .img-fail-icon,.tl-spot-thumb.img-fail .img-fail-icon{display:flex;}
 .spot-map{position:absolute;left:12px;bottom:12px;width:58px;height:58px;border-radius:10px;overflow:hidden;border:2px solid rgba(240,231,213,0.9);box-shadow:0 3px 10px rgba(0,0,0,0.5);background-repeat:no-repeat;background-size:512px 512px;background-color:var(--bg-alt);cursor:pointer;transition:transform .25s ease;display:block;}
 .spot-map:hover{transform:scale(1.1);}
 .spot-map::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:var(--terracotta);border:1.6px solid #fff;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(224,113,79,.28);}
@@ -903,6 +908,17 @@ const BOOKINGS = [
 
 const CHIP_LABEL = { hot:'热门', eat:'美食', pic:'拍照' };
 function el(html){ const t=document.createElement('template'); t.innerHTML=html.trim(); return t.content.firstElementChild; }
+// 配图托管在 Wikimedia（境外），国内网络偶有加载失败/超时；失败时重试一次，仍失败则打标记类显示兜底图标，避免开天窗
+function watchImgLoad(elx, url, retried){
+  if(!elx || !url) return;
+  const img = new Image();
+  img.onload = ()=>{ elx.classList.remove('img-fail'); };
+  img.onerror = ()=>{
+    if(!retried){ setTimeout(()=>watchImgLoad(elx, url, true), 1200); }
+    else{ elx.classList.add('img-fail'); }
+  };
+  img.src = url;
+}
 
 function renderTransit(){
   const grid = document.getElementById('transitStrip');
@@ -1028,7 +1044,7 @@ function renderChapters(){
               const data = type==='spot' ? SPOT_INDEX[refCity+':'+refName] : FOOD_INDEX[refCity+':'+refName];
               if(!data) return;
               const thumb = type==='spot'
-                ? `<div class="tl-spot-thumb" style="background-image:url('${data.img}')"></div>`
+                ? `<div class="tl-spot-thumb" style="background-image:url('${data.img}')"><span class="img-fail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-pin"/></svg></span></div>`
                 : `<div class="tl-spot-thumb ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-cup"/></svg></div>`;
               const sub = type==='spot' ? data.reason : data.d.slice(0,22)+'…';
               const card = el(`<div class="tl-spot-card" data-type="${type}" data-city="${refCity}" data-name="${refName.replace(/"/g,'&quot;')}">
@@ -1040,6 +1056,7 @@ function renderChapters(){
                 <svg class="tl-spot-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-arrow"/></svg>
               </div>`);
               card.addEventListener('click',()=>jumpToGuideSpot(refCity, refName));
+              if(type==='spot') watchImgLoad(card.querySelector('.tl-spot-thumb'), data.img);
               listEl.appendChild(card);
             });
             item.appendChild(listEl);
@@ -1072,6 +1089,7 @@ function renderGuide(){
       const bgX = -(s.left/100*512-29), bgY = -(s.top/100*512-29);
       const row = el(`<div class="spot-row tilt" id="${slugify(city,s.n)}">
         <div class="spot-media" style="background-image:url('${s.img}')">
+          <span class="img-fail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-pin"/></svg></span>
           <a class="spot-map" href="${mapUrl}" target="_blank" rel="noopener" style="background-image:url('${s.tile}');background-position:${bgX.toFixed(1)}px ${bgY.toFixed(1)}px;" title="在地图中查看"></a>
         </div>
         <div class="spot-content">
@@ -1082,6 +1100,7 @@ function renderGuide(){
           <a class="spot-coord" href="${mapUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-pin"/></svg>${s.lat.toFixed(4)}, ${s.lon.toFixed(4)} · 查看地图</a>
         </div>
       </div>`);
+      watchImgLoad(row.querySelector('.spot-media'), s.img);
       sg.appendChild(row);
     });
     panel.appendChild(sg);
