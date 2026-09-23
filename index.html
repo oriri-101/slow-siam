@@ -301,7 +301,7 @@ section{padding:110px 0 14px;position:relative;}
 .tl-spot-reason{font-family:var(--display);font-size:11.5px;color:var(--acc-text,var(--gold-deep));margin-top:2px;}
 .tl-spot-arrow{flex:none;width:14px;height:14px;stroke:var(--ink-faint);transition:transform .25s ease;}
 .tl-spot-card:hover .tl-spot-arrow{transform:translateX(3px);stroke:var(--acc-text,var(--gold-deep));}
-.spot-row.flash, .food-card.flash{animation:spotflash 1.4s ease;}
+.spot-row.flash, .food-card.flash, .cls-card.flash{animation:spotflash 1.4s ease;}
 @keyframes spotflash{0%{box-shadow:0 0 0 3px var(--gold);}100%{box-shadow:0 0 0 0 transparent;}}
 
 .surf-panel{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,#0b3a30,#0e6e5a 70%);color:#eafff7;padding:42px 38px;margin-top:8px;}
@@ -371,6 +371,15 @@ section{padding:110px 0 14px;position:relative;}
 .food-scroll{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 @media(max-width:760px){.food-scroll{grid-template-columns:1fr;}}
 .food-card{padding:22px 24px;display:flex;gap:16px;align-items:flex-start;}
+.cls-card{padding:20px 22px;display:flex;gap:14px;align-items:flex-start;}
+.cls-icon{width:38px;height:38px;border-radius:11px;background:var(--acc-soft,var(--gold-soft));display:flex;align-items:center;justify-content:center;flex:none;}
+.cls-icon svg{width:19px;height:19px;stroke:var(--acc-text,var(--gold-deep));}
+.cls-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.cls-badge{font-size:10.5px;color:var(--acc-text,var(--gold-deep));background:var(--acc-soft,var(--gold-soft));padding:3px 9px;border-radius:999px;white-space:nowrap;font-family:var(--display);letter-spacing:.04em;}
+.cls-badge.alt{background:var(--bg-alt);color:var(--ink-faint);}
+.cls-how{margin-top:9px;font-size:11.5px;line-height:1.55;color:var(--ink-faint);border-top:1px dashed var(--line);padding-top:8px;}
+.cls-how b{color:var(--acc-text,var(--gold-deep));font-weight:600;}
+
 .food-icon{width:38px;height:38px;border-radius:11px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;flex:none;}
 .food-icon svg{width:19px;height:19px;stroke:var(--gold-deep);}
 .food-card .n{font-family:var(--serif);font-weight:600;font-size:15px;}
@@ -477,6 +486,7 @@ footer .s{font-size:11.5px;color:var(--ink-faint);margin-top:8px;letter-spacing:
   .spot-content .story{font-size:12px;margin-top:9px;}
   .note-card{padding:16px 16px;}
   .food-card{padding:18px 16px;gap:12px;}
+  .cls-card{padding:18px 16px;gap:12px;}
   .topnav{padding:11px 20px 8px;}
   .backtop{right:16px;bottom:16px;width:38px;height:38px;}
   footer{margin-top:64px;padding:40px 20px 48px;}
@@ -512,6 +522,7 @@ footer .s{font-size:11.5px;color:var(--ink-faint);margin-top:8px;letter-spacing:
 <symbol id="ic-bed" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 18v-8a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v3"/><path d="M3 18v3M21 18v3M12 13h7a2 2 0 0 1 2 2v3M3 18h18"/></symbol>
 <symbol id="ic-wave" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M2 15c2 0 2.5-3 5-3s3 3 5 3 2.5-3 5-3 3 3 5 3M2 19c2 0 2.5-2.5 5-2.5s3 2.5 5 2.5 2.5-2.5 5-2.5 3 2.5 5 2.5"/></symbol>
 <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></symbol>
+<symbol id="ic-class" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4.5 9v6M7.5 9v6M4.5 12h3M16.5 9v6M19.5 9v6M16.5 12h3M7.5 12h9"/></symbol>
 <symbol id="ic-cup" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M5 9h13l-1 8a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3L5 9Z"/><path d="M18 9h1.5a2 2 0 0 1 0 4H18M8 3.5c0 1-1 1.2-1 2.2M12 3.5c0 1-1 1.2-1 2.2"/></symbol>
 <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/></symbol>
 <symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></symbol>
@@ -800,29 +811,33 @@ const DAYS = [
       ['晚间','宁曼路晚餐，三人正式会合',['eat'],[['spot','chiangmai','宁曼路 · One Nimman'],['food','chiangmai','宁曼路咖啡巡礼']]],
     ]},
   { phase:'chiangmai', idx:9, d:'10.2', m:'THU', who:'三人', loc:'宁曼路 · One Nimman', hotel:'Casa Sol H1',
-    hook:'清迈的"文青圣地"，慢慢喝一杯拉花，逛完一整条巷子的设计小店。', kw:['咖啡巡礼','设计小店','按摩'],
+    hook:'清迈的"文青圣地"，慢慢喝一杯拉花，再留两小时给泰拳课。', kw:['咖啡巡礼','泰拳课','设计小店'],
     stops:[
       ['全天','睡到自然醒',[]],
       ['白天','宁曼路、One Nimman，咖啡与按摩：Graph Cafe、Lot of Taste 等本地人气咖啡馆都在附近',['pic','eat'],[['spot','chiangmai','宁曼路 · One Nimman'],['food','chiangmai','宁曼路咖啡巡礼']]],
+      ['下午','泰拳体验课 90 分钟：宁曼路周边拳馆，零基础友好，教练按体能调节奏',['hot'],[['class','chiangmai','泰拳体验课']]],
       ['傍晚','继续闲逛设计小店与文创空间',['pic']],
     ]},
   { phase:'chiangmai', idx:10, d:'10.3', m:'FRI', who:'三人', loc:'帕辛寺 · 柴迪隆寺', hotel:'Casa Sol H1',
     hook:'古城不大，走一圈就能看完兰纳风情最浓的两座寺庙。', kw:['古城','兰纳建筑','夜市'],
     stops:[
       ['全天','古城轻松走：帕辛寺、柴迪隆寺 · 寺庙着装遮肩过膝',['hot'],[['spot','chiangmai','帕辛寺'],['spot','chiangmai','柴迪隆寺']]],
+      ['下午','瓦莱路手作：银饰锻造 or 兰纳蜡染，2 小时成品带走，就在古城南门外',['pic'],[['class','chiangmai','银饰 / 蜡染手作']]],
       ['傍晚','塔佩门红墙白鸽是古城地标，日落前光线最好',['pic'],[['spot','chiangmai','塔佩门']]],
       ['晚间','夜市或小酒馆',['eat'],[['food','chiangmai','古城夜市小酒馆']]],
     ]},
   { phase:'chiangmai', idx:11, d:'10.4', m:'SAT', who:'三人', loc:'湄甘蓬半日包车', hotel:'Casa Sol H1',
-    hook:'山林与温泉资源丰富，半日包车刚好留出下午的空白。', kw:['半日包车','山林温泉','备选SPA'],
+    hook:'上午在厨房里认香料，下午进山泡温泉——一天之内两种清迈。', kw:['烹饪课','半日包车','山林温泉'],
     stops:[
-      ['半日','湄甘蓬半日包车',['pic'],[['spot','chiangmai','湄甘蓬']]],
+      ['上午','泰餐烹饪课：逛早市认香料 → 一人一灶做 4–5 道菜 → 结业证书（多为 9:00–13:30 上午场）',['eat'],[['class','chiangmai','泰餐烹饪课']]],
+      ['下午','湄甘蓬半日包车：茶村与山林温泉，14:00 后出发，傍晚回城',['pic'],[['spot','chiangmai','湄甘蓬']]],
       ['备选','如天气不佳则改酒店 SPA 与自由活动',[]],
     ]},
   { phase:'chiangmai', idx:12, d:'10.5', m:'SUN', who:'三人', loc:'留白日 · 清迈 → 北京', hotel:'飞机上',
     hook:'不排大项目的最后一天，把行李收好，把假期过完。', kw:['留白','打包','夜航'],
     stops:[
-      ['白天','留白，不排大项目',[]],
+      ['清晨','公园瑜伽 8:30–9:45：Nong Buak Hard Park 免费露天晨练，租垫 15–20 泰铢',[],[['class','chiangmai','公园瑜伽']]],
+      ['白天','古城早餐、收行李，其余留白',[]],
       ['傍晚','前往机场，晚间飞回北京',[]],
     ]},
   { phase:'chiangmai', idx:13, d:'10.6', m:'MON', who:'—', loc:'抵达北京', hotel:'—',
@@ -890,6 +905,43 @@ const FOODS = {
     { n:'古城夜市小酒馆', loc:'清迈', d:'帕辛寺、柴迪隆寺周边的夜市与小酒馆，逛完古城顺路解决晚餐。' },
   ],
 };
+const CLASSES = {
+  chiangmai:[
+    { n:'泰拳体验课', loc:'宁曼路 · 古城周边拳馆', dur:'90 分钟', price:'300–400 泰铢 ≈ 60–80 元',
+      d:'清迈被称作"兴趣班超市"，泰拳是其中最火的一项。Sting Hive、Heavy Hit（Suthep，最适合新手）、North Gate 一带的拳馆都按体能调节奏，零基础直接上团课也不吃力；国内私教动辄 300–400 元，这里不到三分之一。',
+      how:'Klook / Tripadvisor 预订，或 Instagram 私信拳馆；当天约通常有位，热门傍晚场建议提前 1 天。' },
+    { n:'泰餐烹饪课', loc:'香米厨艺学校 / Baan Thai', dur:'半日（约 4 小时）', price:'900–1400 泰铢 ≈ 180–280 元',
+      d:'从逛早市认香料开始，一人一灶做 4–5 道菜（冬阴功、咖喱、青木瓜沙拉），结业发证书，老师还会帮忙拍照。香米厨艺学校有中文授课，Baan Thai 在古城内步行可达。',
+      how:'Klook 或官网预订，热门提前 1–2 天；**多为上午场 9:00–13:30**，需把当天其他安排往后挪。' },
+    { n:'银饰 / 蜡染手作', loc:'瓦莱路（古城南门外）', dur:'2 小时', price:'约 50–150 元',
+      d:'瓦莱路是清迈世代相传的银匠街，街边看到样品推门就能做——银饰锻造、兰纳蜡染 Batik、木雕任选，做完直接带走当纪念品。Nova 银饰的 5 小时进阶课较贵（约 1100 元），时间紧不建议。',
+      how:'无需预约，walk-in 即可；想做复杂款式可先到店看样品再约时间。' },
+    { n:'公园瑜伽', loc:'Nong Buak Hard Park（古城西南角）', dur:'75 分钟', price:'免费（租垫 15–20 泰铢）',
+      d:'每天 8:30–9:45 在古城护城河边的草坪上，本地人与旅居者一起露天晨练，教练带完一套会收自愿捐助。清晨光线和温度都是一天里最舒服的时候，做完直接去吃早餐。',
+      how:'直接去，不用报名；自带毛巾或到现场租垫子。' },
+    { n:'室内攀岩抱石', loc:'Main Wall Climbing Gym', dur:'单次', price:'750 泰铢 / 3 次 ≈ 50 元/次', alt:1,
+      d:'清迈室内攀岩馆不多但足够玩，Main Wall 有抱石与高墙线路，新手可约教练带一小时。想玩户外可去 Crazy Horse 岩场，距古城约 50 分钟车程，含交通装备约 500 元。',
+      how:'Walk-in 买次卡；户外岩场需在 Klook 或岩场官网提前预约接送。' },
+    { n:'陶艺手作', loc:'古城内外陶艺工坊', dur:'2–3 小时', price:'约 80–150 元', alt:1,
+      d:'拉坯、修型、上釉一条龙，成品需要烧制，工坊可代为烧好后寄回或自行回取。清迈的陶艺村集中在杭东县方向，古城内也有小型工作室。',
+      how:'Instagram 或 Google Maps 找工坊私信预约，多数支持下午场。' },
+    { n:'射箭 Bow & Brew', loc:'古城周边射箭馆', dur:'1 小时', price:'约 40 元', alt:1,
+      d:'新手有教练从站姿教起，射完可以在隔壁喝一杯。价格低到离谱，适合填缝。',
+      how:'Walk-in，晚上人稍多。' },
+    { n:'颂钵音疗', loc:'Wild Rose / One Yoga 等身心工作室', dur:'60–90 分钟', price:'约 70–120 元', alt:1,
+      d:'清迈的身心类课程密度极高，颂钵、冥想、音疗一套下来通常不到百元，是长途飞行前后放松的好选择。',
+      how:'官网或 Facebook 主页看课表，部分需提前一天预约。' },
+    { n:'泰式按摩课', loc:'古城正规按摩学校', dur:'半天至一天', price:'约 150–250 元', alt:1,
+      d:'和"被按摩"完全不同——学的是正规泰式按摩手法，结业可拿证书。想认真学可选 2–3 天的进阶课程。',
+      how:'学校官网或到店报名，部分需要凑够开班人数。' },
+    { n:'网球 / 滑板 / 游泳', loc:'公共运动设施', dur:'按小时', price:'网球场地 200 泰铢/小时 · 游泳约 8 元', alt:1,
+      d:'清迈的公共运动设施便宜到不像话，适合把碎片时间填满。游泳馆单次约 8 元，网球场按小时计费，滑板场多与咖啡馆、商场相邻。',
+      how:'Walk-in，网球场建议当天电话问场地。' },
+  ],
+};
+const CLASS_INDEX = {};
+Object.keys(CLASSES).forEach(city=>{ CLASSES[city].forEach(c=>{ CLASS_INDEX[city+':'+c.n] = c; }); });
+
 const FOOD_INDEX = {};
 Object.keys(FOODS).forEach(city=>{ FOODS[city].forEach(f=>{ FOOD_INDEX[city+':'+f.n] = f; }); });
 
@@ -908,6 +960,8 @@ const BOOKINGS = [
   'Casa ↔ Memories Beach 往返车；机场 ↔ Casa 两程接送',
   'Memories Beach 双人私教冲浪课，优先 9 月 29 日 10:00',
   '曼谷 9 月 24 日至 28 日住宿',
+  '清迈泰餐烹饪课（10.4 上午场，提前 1–2 天）',
+  '清迈泰拳体验课（10.2 下午场，可当天约）',
   '清迈湄甘蓬半日包车',
 ];
 
@@ -1046,16 +1100,16 @@ function renderChapters(){
             const listEl = el(`<div class="tl-spot-list"></div>`);
             refs.forEach(ref=>{
               const [type, refCity, refName] = ref;
-              const data = type==='spot' ? SPOT_INDEX[refCity+':'+refName] : FOOD_INDEX[refCity+':'+refName];
+              const data = (type==='spot'?SPOT_INDEX:type==='class'?CLASS_INDEX:FOOD_INDEX)[refCity+':'+refName];
               if(!data) return;
               const thumb = type==='spot'
                 ? `<div class="tl-spot-thumb ph" data-ik="${refCity}:${refName}"><span class="img-fail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-pin"/></svg></span></div>`
-                : `<div class="tl-spot-thumb ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-cup"/></svg></div>`;
-              const sub = type==='spot' ? data.reason : data.d.slice(0,22)+'…';
+                : `<div class="tl-spot-thumb ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#${type==='class'?'ic-class':'ic-cup'}"/></svg></div>`;
+              const sub = type==='spot' ? data.reason : data.d.replace(/\*\*/g,'').slice(0,22)+'…';
               const card = el(`<div class="tl-spot-card" data-type="${type}" data-city="${refCity}" data-name="${refName.replace(/"/g,'&quot;')}">
                 ${thumb}
                 <div class="tl-spot-body">
-                  <div class="tl-spot-name">${refName}<span class="tl-spot-tag">${type==='spot'?'景点':'美食'}</span></div>
+                  <div class="tl-spot-name">${refName}<span class="tl-spot-tag">${type==='spot'?'景点':type==='class'?'体验课':'美食'}</span></div>
                   <div class="tl-spot-reason">${sub}</div>
                 </div>
                 <svg class="tl-spot-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-arrow"/></svg>
@@ -1112,6 +1166,15 @@ function renderGuide(){
       fg.appendChild(el(`<div class="card tilt food-card" id="${slugify(city,f.n)}"><div class="food-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-cup"/></svg></div><div style="flex:1;min-width:0;"><div class="n serif">${f.n}</div><div class="loc">${f.loc}</div><div class="d">${f.d}</div></div></div>`));
     });
     panel.appendChild(fg);
+    if(CLASSES[city] && CLASSES[city].length){
+      panel.appendChild(el(`<div class="guide-sub disp">兴趣班 · 体验课</div>`));
+      const cg = el(`<div class="food-scroll"></div>`);
+      CLASSES[city].forEach(c=>{
+        const badge = `<span class="cls-badge ${c.alt?'alt':''}">${c.alt?'备选池':c.dur}</span>`;
+        cg.appendChild(el(`<div class="card tilt cls-card" id="${slugify(city,c.n)}"><div class="cls-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-class"/></svg></div><div style="flex:1;min-width:0;"><div class="cls-head"><span class="n serif">${c.n}</span>${badge}</div><div class="loc">${c.loc}</div><div class="d">${c.d}</div><div class="cls-how"><b>${c.alt?'怎么去':c.price+' · 怎么约'}：</b>${c.how.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}</div></div></div>`));
+      });
+      panel.appendChild(cg);
+    }
     panelsRoot.appendChild(panel);
   });
 }
@@ -1244,7 +1307,36 @@ function setWalker(idx){
     b.classList.toggle('active', i+1===idx);
     b.classList.toggle('past', i+1<idx);
   });
+  followWalker(idx);
 }
+
+/* ---------- datebar 边缘跟随：小人走到边缘时轴自动让位 ---------- */
+const dbBar = document.querySelector('.datebar');
+const dbInner = document.querySelector('.db-inner');
+let dbLockUntil = 0;
+function followWalker(idx){
+  if(Date.now() < dbLockUntil) return;                  // 用户手动横滑后短暂让位
+  const full = dbBar.scrollWidth, view = dbBar.clientWidth, maxOff = full - view;
+  if(maxOff <= 4) return;                               // 桌面：轴整体放得下，完全不动
+  const padL = parseFloat(getComputedStyle(dbBar).paddingLeft) || 0;
+  const cx = padL + (idx-1)/(DAYS.length-1) * dbInner.offsetWidth;  // 小人中心（可视坐标系）
+  const edge = Math.min(Math.max(view*0.15, 48), view*0.3);        // 左右边缘死区
+  let off = dbBar.scrollLeft;
+  if(cx - off < edge) off = cx - edge;
+  else if(cx - off > view - edge) off = cx - (view - edge);
+  off = Math.max(0, Math.min(maxOff, off));
+  if(Math.abs(off - dbBar.scrollLeft) < 2) return;
+  try{ dbBar.scrollTo({left:off, behavior:'smooth'}); } catch(e){ dbBar.scrollLeft = off; }
+}
+/* 触摸暂停：仅当用户真的横向拖动/横滚时才让位，点日期跳转不受影响 */
+let dbTouchX = null;
+dbBar.addEventListener('touchstart', e=>{ dbTouchX = e.touches[0].clientX; }, {passive:true});
+dbBar.addEventListener('touchmove', e=>{
+  if(dbTouchX !== null && Math.abs(e.touches[0].clientX - dbTouchX) > 10){ dbLockUntil = Date.now()+2500; dbTouchX = null; }
+}, {passive:true});
+dbBar.addEventListener('wheel', e=>{ if(Math.abs(e.deltaX) > Math.abs(e.deltaY)) dbLockUntil = Date.now()+2500; }, {passive:true});
+window.addEventListener('resize', ()=>{ dbLockUntil = 0; followWalker(currentDay); });
+
 setWalker(1);
 const dayObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
