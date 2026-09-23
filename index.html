@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>慢渡暹罗，寄信予时光 · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#141110;--bg-alt:#1a1613;--bg-band:#1e1915;--card:#231d17;--card-hi:#2a231c;
+  --ink:#f0e7d5;--ink-soft:#b8ab92;--ink-faint:#7e7360;
+  --line:rgba(240,231,213,0.09);--line-strong:rgba(240,231,213,0.20);
+  --gold:#d9a54e;--gold-deep:#e6bd72;--gold-soft:rgba(217,165,78,0.16);
+  --terracotta:#e0714f;--terracotta-soft:rgba(224,113,79,0.16);
+  --teal:#3cb899;--teal-deep:#6fd0b7;--teal-soft:rgba(60,184,153,0.14);
+  --forest:#96b377;--forest-deep:#b5cc9a;--forest-soft:rgba(150,179,119,0.14);
+  --shadow-lift:0 8px 20px rgba(0,0,0,0.35),0 24px 56px rgba(0,0,0,0.35);
+  --radius-md:14px;--radius-lg:20px;
+  --serif:'Playfair Display','Noto Serif SC','Songti SC',serif;--sans:'Noto Sans SC','PingFang SC',sans-serif;
+  --display:'Cormorant Garamond','Playfair Display','Noto Serif SC',serif;
+  --ease:cubic-bezier(.22,.68,.36,1);
+  --head-bg:rgba(20,17,16,0.88);
+  --pattern:
+    radial-gradient(ellipse 900px 620px at 6% 0%, rgba(217,165,78,0.09), transparent 60%),
+    radial-gradient(ellipse 820px 580px at 100% 32%, rgba(60,184,153,0.075), transparent 62%),
+    radial-gradient(ellipse 760px 640px at 4% 100%, rgba(150,179,119,0.07), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='none' stroke='%23d9a54e' stroke-width='1.1' opacity='0.115'%3E%3Cpath d='M34 210 L34 150 Q34 126 46 112 Q58 126 58 150 L58 210'/%3E%3Cpath d='M27 112 L65 112'/%3E%3Ccircle cx='46' cy='98' r='4.5'/%3E%3Cpath d='M46 93 L46 80'/%3E%3Cpath d='M46 80 L40 72 M46 80 L52 72'/%3E%3Cpath d='M170 70 C146 70 132 92 132 116 C158 116 170 98 170 70 Z'/%3E%3Cpath d='M132 116 C132 138 148 152 170 152'/%3E%3Cpath d='M120 200 C120 178 136 164 156 164 C156 186 140 200 120 200 Z' opacity='0.8'/%3E%3C/g%3E%3Cg fill='none' stroke='%233cb899' stroke-width='0.9' stroke-dasharray='2 5' opacity='0.12'%3E%3Cpath d='M0 236 Q16 226 32 236 T64 236 T96 236 T128 236 T160 236 T192 236 T224 236 T260 236'/%3E%3Cpath d='M0 250 Q16 242 32 250 T64 250 T96 250 T128 250 T160 250 T192 250 T224 250 T260 250'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* 浅色版本 · 纸感暖白，与深色版同构 */
+:root[data-theme="light"]{
+  --bg:#f7f3ea;--bg-alt:#efe9dc;--bg-band:#f3ede2;--card:#fffdf8;--card-hi:#faf5ec;
+  --ink:#2a2621;--ink-soft:#6e6559;--ink-faint:#988d7a;
+  --line:rgba(42,38,33,0.10);--line-strong:rgba(42,38,33,0.22);
+  --gold:#b8863a;--gold-deep:#8a6222;--gold-soft:rgba(184,134,58,0.14);
+  --terracotta:#bb5238;--terracotta-soft:rgba(187,82,56,0.12);
+  --teal:#0e7a63;--teal-deep:#0a5a49;--teal-soft:rgba(14,122,99,0.12);
+  --forest:#5c7a4d;--forest-deep:#3d5233;--forest-soft:rgba(92,122,77,0.13);
+  --shadow-lift:0 6px 14px rgba(42,38,33,0.07),0 18px 40px rgba(42,38,33,0.09);
+  --head-bg:rgba(247,243,234,0.9);
+  --pattern:
+    radial-gradient(ellipse 900px 620px at 6% 0%, rgba(184,134,58,0.09), transparent 60%),
+    radial-gradient(ellipse 820px 580px at 100% 32%, rgba(14,122,99,0.06), transparent 62%),
+    radial-gradient(ellipse 760px 640px at 4% 100%, rgba(92,122,77,0.07), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='none' stroke='%238a6222' stroke-width='1.1' opacity='0.13'%3E%3Cpath d='M34 210 L34 150 Q34 126 46 112 Q58 126 58 150 L58 210'/%3E%3Cpath d='M27 112 L65 112'/%3E%3Ccircle cx='46' cy='98' r='4.5'/%3E%3Cpath d='M46 93 L46 80'/%3E%3Cpath d='M46 80 L40 72 M46 80 L52 72'/%3E%3Cpath d='M170 70 C146 70 132 92 132 116 C158 116 170 98 170 70 Z'/%3E%3Cpath d='M132 116 C132 138 148 152 170 152'/%3E%3Cpath d='M120 200 C120 178 136 164 156 164 C156 186 140 200 120 200 Z' opacity='0.8'/%3E%3C/g%3E%3Cg fill='none' stroke='%230a5a49' stroke-width='0.9' stroke-dasharray='2 5' opacity='0.13'%3E%3Cpath d='M0 236 Q16 226 32 236 T64 236 T96 236 T128 236 T160 236 T192 236 T224 236 T260 236'/%3E%3Cpath d='M0 250 Q16 242 32 250 T64 250 T96 250 T128 250 T160 250 T192 250 T224 250 T260 250'/%3E%3C/g%3E%3C/svg%3E");
+}
+:root[data-theme="light"] .fixedhead.scrolled{box-shadow:0 1px 0 var(--line);}
+:root[data-theme="light"] .db-day .node{background:var(--bg);}
+:root[data-theme="light"] .tl-item::before{background:var(--bg);}
+:root[data-theme="light"] .chapter-divider .bg-num{opacity:.13;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:var(--pattern);
+  background-repeat:no-repeat,no-repeat,no-repeat,repeat;
+  background-size:auto,auto,auto,260px 260px;
+}
+a{color:inherit;text-decoration:none;}
+::selection{background:rgba(217,165,78,0.28);color:var(--gold-deep);}
+.wrap{max-width:1060px;margin:0 auto;padding:0 32px;}
+.serif{font-family:var(--serif);}
+.disp{font-family:var(--display);font-style:italic;}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+.reveal-stagger.in>*{opacity:1;transform:translateY(0);}
+.scale-in{opacity:0;transform:scale(.95);transition:opacity 1s var(--ease),transform 1s var(--ease);}
+.scale-in.in{opacity:1;transform:scale(1);}
+
+#progress-bar{position:fixed;top:0;left:0;height:2.5px;background:linear-gradient(90deg,var(--gold),var(--teal));z-index:220;width:0%;transition:width .1s linear;}
+
+/* ---------- FIXED HEADER (nav + datebar) ---------- */
+.fixedhead{position:fixed;top:0;left:0;right:0;z-index:200;transition:box-shadow .4s ease,background .4s ease,backdrop-filter .4s ease;}
+.fixedhead.scrolled{background:var(--head-bg);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(200,190,170,0.16);}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px 10px;}
+.brand{font-family:var(--serif);font-weight:600;font-size:16px;color:var(--gold-deep);display:flex;align-items:center;gap:8px;}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--terracotta);}
+.brand .sub{color:var(--ink-faint);font-weight:400;}
+.navlinks{display:flex;gap:24px;list-style:none;}
+.navlinks a{font-size:13px;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .25s;}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--gold);transition:width .3s ease;}
+.navlinks a:hover{color:var(--ink);}
+.navlinks a.active{color:var(--gold-deep);}
+.navlinks a.active::after{width:100%;}
+@media(max-width:900px){.navlinks{display:none;}}
+
+.datebar{padding:0 32px 10px;}
+.db-inner{position:relative;max-width:1060px;margin:0 auto;}
+.db-line{position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-strong);}
+.db-fill{position:absolute;left:0;top:0;height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .6s var(--ease);}
+.db-walker{position:absolute;top:-7px;left:0;width:34px;height:16px;margin-left:-17px;display:flex;align-items:flex-end;justify-content:center;color:var(--gold-deep);transition:left .7s var(--ease);z-index:2;filter:drop-shadow(0 0 6px rgba(217,165,78,.45));}
+.db-walker .wset{display:none;align-items:flex-end;}
+.db-walker.two .w2{display:flex;}
+.db-walker.three .w3{display:flex;}
+.db-walker svg{width:13px;height:13px;animation:walkbob 1.4s ease-in-out infinite;flex:none;}
+.db-walker .w2 svg:last-child{margin-left:-4px;opacity:.72;animation-delay:.3s;}
+.db-walker .w3 svg:nth-child(2){margin-left:-4px;opacity:.75;animation-delay:.3s;}
+.db-walker .w3 svg:nth-child(3){margin-left:-4px;opacity:.5;animation-delay:.6s;}
+@keyframes walkbob{0%,100%{transform:translateY(0);}50%{transform:translateY(-2.5px);}}
+.db-days{position:relative;display:flex;justify-content:space-between;z-index:1;}
+.db-day{background:none;border:none;cursor:pointer;font-family:var(--sans);display:flex;flex-direction:column;align-items:center;gap:3px;padding:0 2px;transition:transform .25s ease;}
+.db-day .node{width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.4px solid var(--ink-faint);transition:all .3s ease;margin-top:5px;}
+.db-day .dt{font-size:10px;color:var(--ink-faint);letter-spacing:.03em;transition:color .3s ease;white-space:nowrap;}
+.db-day:hover .dt{color:var(--ink);}
+.db-day.active .node{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 4px rgba(217,165,78,0.18);}
+.db-day.active .dt{color:var(--gold-deep);font-weight:600;}
+.db-day.past .node{border-color:var(--gold);background:var(--gold-soft);}
+@media(max-width:860px){
+  .datebar{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px;}
+  .datebar::-webkit-scrollbar{display:none;}
+  .db-inner{min-width:640px;}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  overflow:hidden;padding:150px 32px 80px;
+  background:
+    linear-gradient(180deg, rgba(14,11,9,0.62) 0%, rgba(14,11,9,0.22) 32%, rgba(14,11,9,0.34) 60%, rgba(20,17,16,0.92) 88%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(14,11,9,0.6) 0%, rgba(14,11,9,0.3) 46%, rgba(14,11,9,0.1) 100%),
+    url("https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Yi_peng_sky_lantern_festival_San_Sai_Thailand.jpg/1280px-Yi_peng_sky_lantern_festival_San_Sai_Thailand.jpg") center 50%/cover no-repeat;
+}
+.hero-veil{position:absolute;inset:0;background:radial-gradient(ellipse 1100px 640px at 22% 62%, rgba(16,13,11,0.12), transparent 65%);pointer-events:none;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;color:#e6bd72;border:1px solid rgba(217,165,78,0.4);background:rgba(20,17,16,0.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:6px 15px;border-radius:999px;width:fit-content;margin-bottom:28px;position:relative;z-index:2;}
+.hero-eyebrow svg{width:13px;height:13px;}
+.hero h1{position:relative;z-index:2;font-family:var(--serif);font-weight:700;font-size:clamp(40px,7.4vw,82px);line-height:1.18;color:#faf4e6;}
+.h-line{display:block;overflow:hidden;}
+.h-line>span{display:inline-block;transform:translateY(112%);animation:riseUp 1s var(--ease) forwards;}
+.h-line:nth-child(2)>span{animation-delay:.22s;}
+.h-line em{font-style:normal;color:var(--gold-deep);}
+@supports ((-webkit-background-clip:text)){
+  .h-line>span{
+    background-image:
+      linear-gradient(180deg, rgba(248,218,148,0.72) 0%, rgba(226,176,98,0.6) 46%, rgba(176,122,56,0.62) 100%),
+      url("https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Yi_peng_sky_lantern_festival_San_Sai_Thailand.jpg/1280px-Yi_peng_sky_lantern_festival_San_Sai_Thailand.jpg");
+    background-size:cover,cover;background-position:center 50%,center 50%;
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+  .hero h1{filter:drop-shadow(0 3px 18px rgba(0,0,0,0.5));}
+  .hero h1 .h-line em{-webkit-text-fill-color:#fdf3dc;}
+}
+@keyframes riseUp{to{transform:translateY(0);}}
+.hero-sub{position:relative;z-index:2;margin-top:24px;font-size:16px;color:#f3ecdc;max-width:560px;text-shadow:0 1px 10px rgba(0,0,0,0.6);opacity:0;animation:fadeUp .9s var(--ease) forwards .7s;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.hero-quote{position:relative;z-index:2;margin-top:10px;font-family:var(--display);font-size:20px;color:#f2ca79;text-shadow:0 1px 10px rgba(0,0,0,0.55);opacity:0;animation:fadeUp .9s var(--ease) forwards .95s;}
+.hero-meta{position:relative;z-index:2;display:flex;gap:38px;margin-top:46px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s var(--ease) forwards 1.15s;}
+.hero-meta .item .label{font-size:11px;color:rgba(243,236,220,0.68);letter-spacing:.08em;}
+.hero-meta .item .val{font-family:var(--serif);font-size:21px;color:#faf4e6;font-weight:600;margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,0.5);}
+.hero-meta .item .val .cnt{display:inline-block;}
+.ticker-wrap{position:relative;z-index:2;margin-top:52px;overflow:hidden;border-top:1px solid rgba(240,231,213,0.14);border-bottom:1px solid rgba(240,231,213,0.14);padding:13px 0;opacity:0;animation:fadeUp .9s var(--ease) forwards 1.3s;}
+.ticker{display:flex;gap:40px;white-space:nowrap;animation:tickermove 26s linear infinite;width:max-content;}
+.ticker span{font-size:12px;color:rgba(240,231,213,0.55);letter-spacing:.05em;display:flex;align-items:center;gap:10px;}
+.ticker span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold);}
+@keyframes tickermove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.scroll-cue{position:absolute;bottom:26px;left:32px;display:flex;align-items:center;gap:10px;font-size:11px;color:rgba(240,231,213,0.45);letter-spacing:.1em;z-index:2;}
+.scroll-cue .line{width:1px;height:34px;background:linear-gradient(to bottom,rgba(240,231,213,0.5),transparent);position:relative;overflow:hidden;}
+.scroll-cue .line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--gold);animation:scrolldrip 1.8s ease-in-out infinite;}
+@keyframes scrolldrip{0%{top:-100%;}100%{top:100%;}}
+
+section{padding:96px 0 10px;position:relative;}
+.section-head{margin-bottom:48px;}
+.section-tag{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:14px;}
+.section-tag svg{width:16px;height:16px;stroke:var(--gold-deep);}
+.section-title{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,38px);color:var(--ink);}
+.section-desc{margin-top:14px;color:var(--ink-soft);max-width:640px;font-size:14.5px;}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 28px;transition:box-shadow .35s ease,transform .35s ease,border-color .35s ease;}
+.card:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px);border-color:var(--line-strong);}
+
+.transit-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;position:relative;z-index:2;opacity:0;animation:fadeUp .9s var(--ease) forwards 1.45s;}
+@media(max-width:760px){.transit-strip{grid-template-columns:repeat(2,1fr);}}
+.transit-chip{background:rgba(35,29,23,0.72);border:1px solid rgba(240,231,213,0.14);border-radius:12px;padding:12px 14px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.transit-chip .r{font-size:12.5px;font-weight:600;color:#f0e7d5;display:flex;align-items:center;gap:6px;}
+.transit-chip .r svg{width:12px;height:12px;stroke:#e6bd72;}
+.transit-chip .w{font-size:11px;color:rgba(240,231,213,0.62);margin-top:4px;}
+
+.prep-progress{display:flex;align-items:center;gap:16px;margin-bottom:34px;padding:18px 22px;background:var(--card);border-radius:var(--radius-md);border:1px solid var(--line);}
+.prep-progress .ring{position:relative;width:52px;height:52px;flex:none;}
+.prep-progress .ring svg{width:52px;height:52px;transform:rotate(-90deg);}
+.prep-progress .ring circle{fill:none;stroke-width:4;}
+.prep-progress .ring .bg{stroke:var(--line-strong);}
+.prep-progress .ring .fg{stroke:var(--gold);stroke-linecap:round;transition:stroke-dashoffset .6s ease;}
+.prep-progress .ring .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--gold-deep);}
+.prep-progress .info .t{font-size:13.5px;font-weight:600;}
+.prep-progress .info .s{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+
+.priority-group{margin-bottom:18px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--card);overflow:hidden;}
+.priority-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;cursor:pointer;user-select:none;}
+.priority-head .left{display:flex;align-items:center;gap:14px;}
+.priority-chip{font-family:var(--serif);font-weight:700;font-size:13px;padding:4px 11px;border-radius:8px;}
+.p0 .priority-chip{background:var(--terracotta-soft);color:var(--terracotta);}
+.p1 .priority-chip{background:var(--gold-soft);color:var(--gold-deep);}
+.p2 .priority-chip{background:var(--teal-soft);color:var(--teal-deep);}
+.priority-head .name{font-family:var(--serif);font-weight:600;font-size:15.5px;}
+.priority-head .count{font-size:12px;color:var(--ink-faint);}
+.priority-head .chev{width:16px;height:16px;stroke:var(--ink-soft);transition:transform .3s ease;flex:none;}
+.priority-group.open .chev{transform:rotate(180deg);}
+.priority-body{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.priority-group.open .priority-body{max-height:3000px;}
+.item-list{padding:2px 24px 20px;}
+.pack-item{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid var(--line);}
+.pack-item:first-child{border-top:none;}
+.pack-check{flex:none;width:19px;height:19px;border-radius:6px;border:1.4px solid var(--line-strong);margin-top:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease;background:transparent;}
+.pack-check svg{width:11px;height:11px;opacity:0;transition:opacity .15s ease;stroke:var(--bg);}
+.pack-check.checked{background:var(--teal);border-color:var(--teal);}
+.pack-check.checked svg{opacity:1;}
+.pack-item .body{flex:1;min-width:0;}
+.pack-item .name{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.pack-item.done .name{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--line-strong);}
+.pack-item .desc{font-size:12.5px;color:var(--ink-soft);margin-top:4px;line-height:1.6;}
+.tag-src{font-size:10.5px;padding:2px 8px;border-radius:999px;background:var(--bg-alt);color:var(--ink-soft);font-weight:400;white-space:nowrap;}
+.tag-src.self{background:var(--teal-soft);color:var(--teal-deep);}
+.tag-src.buy{background:var(--terracotta-soft);color:var(--terracotta);}
+.tag-src.assign{background:var(--gold-soft);color:var(--gold-deep);}
+.local-buy{margin-top:26px;}
+.local-buy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px;}
+@media(max-width:700px){.local-buy-grid{grid-template-columns:1fr;}}
+.local-buy-item{padding:16px 18px;background:var(--card);border-radius:var(--radius-md);border:1px solid var(--line);}
+.local-buy-item .n{font-size:13.5px;font-weight:600;margin-bottom:4px;}
+.local-buy-item .d{font-size:12.5px;color:var(--ink-soft);}
+.warning-box{margin-top:32px;border:1px solid rgba(224,113,79,0.28);background:linear-gradient(180deg,rgba(224,113,79,0.08),rgba(224,113,79,0.045));border-radius:var(--radius-lg);padding:26px 28px;}
+.warning-box .head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.warning-box .head svg{width:19px;height:19px;stroke:var(--terracotta);}
+.warning-box .head .t{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--terracotta);}
+.warning-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 24px;}
+@media(max-width:700px){.warning-list{grid-template-columns:1fr;}}
+.warning-list li{list-style:none;display:flex;gap:10px;font-size:13px;line-height:1.65;color:var(--ink-soft);}
+.warning-list li b{color:var(--ink);font-weight:500;}
+.warning-list .num{flex:none;width:20px;height:20px;border-radius:50%;background:var(--terracotta);color:var(--bg);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+
+/* ---------- CHAPTER DIVIDER ---------- */
+.chapter-divider{position:relative;padding:120px 32px 56px;text-align:left;overflow:hidden;}
+.chapter-divider .bg-num{position:absolute;top:10px;right:-1vw;font-family:var(--serif);font-weight:700;font-size:min(44vw,400px);line-height:1;z-index:0;opacity:.17;pointer-events:none;user-select:none;color:var(--acc-text,var(--gold));-webkit-text-stroke:1px rgba(217,165,78,0.10);}
+.chapter-divider .inner{position:relative;z-index:1;max-width:1060px;margin:0 auto;}
+.chapter-divider .kicker{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.18em;color:var(--acc-text,var(--gold-deep));text-transform:uppercase;margin-bottom:18px;}
+.chapter-divider .kicker .ln{width:36px;height:1px;background:var(--acc,var(--gold));}
+.chapter-divider h2{font-family:var(--serif);font-weight:700;font-size:clamp(38px,7vw,80px);line-height:1.05;color:var(--ink);}
+.chapter-divider .quote{margin-top:20px;font-family:var(--display);font-size:20px;color:var(--acc-text,var(--gold-deep));max-width:560px;}
+.chapter-stats{display:flex;gap:44px;margin-top:32px;flex-wrap:wrap;}
+.chapter-stats .s .label{font-size:11px;color:var(--ink-faint);letter-spacing:.05em;}
+.chapter-stats .s .val{font-family:var(--serif);font-size:19px;font-weight:600;margin-top:4px;}
+
+/* ---------- DAY BAND (横切) ---------- */
+.day-band{position:relative;border-top:1px solid var(--line);padding:44px 32px;background:var(--bg);transition:background .5s ease;}
+.day-band:nth-child(even){background:var(--bg-alt);}
+.day-band:hover{background:var(--bg-band);}
+.day-band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc,var(--gold));opacity:.75;}
+.day-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:130px 1fr;gap:32px;}
+@media(max-width:680px){.day-grid{grid-template-columns:1fr;gap:14px;}}
+.day-idx .num{font-family:var(--display);font-size:14px;color:var(--acc-text,var(--gold-deep));letter-spacing:.08em;}
+.day-idx .d{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--ink);line-height:1.05;margin-top:6px;}
+.day-idx .m{font-size:11px;color:var(--ink-faint);letter-spacing:.1em;margin-top:2px;}
+.day-idx .who{margin-top:14px;font-size:10.5px;color:var(--acc-text,var(--gold-deep));background:var(--acc-soft,var(--gold-soft));display:inline-block;padding:3px 10px;border-radius:999px;}
+.day-body .headline{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:8px;}
+.day-body .loc{font-family:var(--serif);font-size:20px;font-weight:600;}
+.day-hotel{font-size:11.5px;color:var(--teal-deep);display:flex;align-items:center;gap:5px;background:var(--teal-soft);padding:4px 11px;border-radius:999px;white-space:nowrap;}
+.day-hotel svg{width:11px;height:11px;stroke:var(--teal-deep);}
+.day-hook{font-family:var(--display);font-size:16px;color:var(--ink-soft);margin-bottom:16px;}
+.kw-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.kw{font-size:11px;color:var(--acc-text,var(--gold-deep));background:var(--acc-soft,var(--gold-soft));padding:3px 10px;border-radius:999px;}
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line-strong);}
+.tl-item{position:relative;padding-bottom:18px;font-size:13.5px;line-height:1.75;color:var(--ink);}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:"";position:absolute;left:-28px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.6px solid var(--acc,var(--gold));}
+.tl-item .tag{display:inline-block;font-size:10.5px;color:var(--ink-faint);background:var(--bg-alt);padding:1px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;}
+.tl-chips{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
+.tl-chip{font-size:10.5px;padding:2px 8px;border-radius:6px;background:var(--bg-alt);color:var(--ink-soft);border:1px solid var(--line);}
+.tl-chip.hot{background:var(--terracotta-soft);color:var(--terracotta);border-color:transparent;}
+.tl-chip.eat{background:var(--gold-soft);color:var(--gold-deep);border-color:transparent;}
+.tl-chip.pic{background:var(--teal-soft);color:var(--teal-deep);border-color:transparent;}
+.tl-spot-list{margin-top:10px;display:flex;flex-direction:column;gap:7px;}
+.tl-spot-card{display:flex;gap:12px;align-items:center;padding:9px 12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;cursor:pointer;transition:background .25s ease,border-color .25s ease,transform .25s ease;}
+.tl-spot-card:hover{background:var(--card-hi);border-color:var(--line-strong);transform:translateX(3px);}
+.tl-spot-thumb{width:42px;height:42px;border-radius:9px;background-size:cover;background-position:center;flex:none;background-color:var(--bg-alt);}
+.tl-spot-thumb.ic{display:flex;align-items:center;justify-content:center;background:var(--acc-soft,var(--gold-soft));}
+.tl-spot-thumb.ic svg{width:18px;height:18px;stroke:var(--acc-text,var(--gold-deep));}
+.tl-spot-body{min-width:0;flex:1;}
+.tl-spot-name{font-family:var(--serif);font-size:13.5px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:7px;}
+.tl-spot-tag{font-size:9.5px;color:var(--ink-faint);border:1px solid var(--line-strong);padding:0px 6px;border-radius:999px;font-weight:400;font-family:var(--sans);}
+.tl-spot-reason{font-family:var(--display);font-size:11.5px;color:var(--acc-text,var(--gold-deep));margin-top:2px;}
+.tl-spot-arrow{flex:none;width:14px;height:14px;stroke:var(--ink-faint);transition:transform .25s ease;}
+.tl-spot-card:hover .tl-spot-arrow{transform:translateX(3px);stroke:var(--acc-text,var(--gold-deep));}
+.spot-row.flash, .food-card.flash{animation:spotflash 1.4s ease;}
+@keyframes spotflash{0%{box-shadow:0 0 0 3px var(--gold);}100%{box-shadow:0 0 0 0 transparent;}}
+
+.surf-panel{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,#0b3a30,#0e6e5a 70%);color:#eafff7;padding:42px 38px;margin-top:8px;}
+.surf-panel::before{content:"";position:absolute;inset:0;opacity:.12;background-image:radial-gradient(circle at 15% 20%,#fff 0,transparent 45%),radial-gradient(circle at 85% 80%,#fff 0,transparent 40%);}
+.surf-wave{position:absolute;bottom:-1px;left:0;width:100%;opacity:.5;}
+.surf-head{display:flex;align-items:center;gap:12px;margin-bottom:8px;position:relative;z-index:1;}
+.surf-head svg{width:24px;height:24px;stroke:#eafff7;}
+.surf-head .t{font-family:var(--serif);font-size:22px;font-weight:700;}
+.surf-sub{font-size:13.5px;opacity:.85;max-width:540px;position:relative;z-index:1;margin-bottom:28px;}
+.surf-schedule{display:flex;gap:0;position:relative;z-index:1;flex-wrap:wrap;}
+.surf-step{flex:1;min-width:110px;padding-right:16px;position:relative;}
+.surf-step:not(:last-child)::after{content:"";position:absolute;top:8px;right:0;width:14px;height:1px;background:rgba(234,255,247,.4);}
+.surf-step .time{font-family:var(--serif);font-size:16px;font-weight:700;}
+.surf-step .label{font-size:12px;opacity:.82;margin-top:5px;line-height:1.5;}
+.surf-links{display:flex;gap:12px;margin-top:30px;position:relative;z-index:1;flex-wrap:wrap;}
+.surf-links a{font-size:12.5px;padding:9px 16px;border:1px solid rgba(234,255,247,.4);border-radius:999px;display:flex;align-items:center;gap:6px;transition:background .25s ease;}
+.surf-links a:hover{background:rgba(234,255,247,.14);}
+.surf-links a svg{width:12px;height:12px;stroke:#eafff7;}
+.surf-note{margin-top:20px;font-size:12px;opacity:.75;position:relative;z-index:1;}
+
+.stay-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+@media(max-width:900px){.stay-strip{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.stay-strip{grid-template-columns:1fr;}}
+.stay-card .city{font-size:11px;letter-spacing:.06em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:8px;}
+.stay-card .hname{font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.45;}
+.stay-card .dates{font-size:12px;color:var(--ink-soft);margin-top:6px;}
+.stay-card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);}
+.stay-card .who{font-size:11.5px;color:var(--ink-faint);}
+.stay-status{font-size:10.5px;padding:3px 9px;border-radius:999px;font-weight:500;}
+.stay-status.ok{background:var(--teal-soft);color:var(--teal-deep);}
+.stay-status.pending{background:var(--gold-soft);color:var(--gold-deep);}
+
+.guide-tabs{display:flex;gap:8px;margin-bottom:36px;background:var(--card);padding:6px;border-radius:999px;width:fit-content;}
+.tabbtn{padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--ink-soft);cursor:pointer;transition:all .3s ease;border:none;background:transparent;font-family:var(--sans);}
+.tabbtn.active{background:var(--gold);color:var(--bg);box-shadow:var(--shadow-lift);}
+.guide-panel{display:none;}
+.guide-panel.active{display:block;animation:fadein .5s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.guide-sub{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--ink-soft);margin:28px 0 14px;text-transform:uppercase;letter-spacing:.05em;font-style:normal;}
+.guide-sub:first-child{margin-top:0;}
+.spot-list{display:flex;flex-direction:column;gap:16px;}
+.spot-row{display:grid;grid-template-columns:250px 1fr;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .35s ease,transform .35s ease,border-color .35s ease;}
+.spot-row:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px);border-color:var(--line-strong);}
+@media(max-width:720px){.spot-row{grid-template-columns:1fr;}}
+.spot-media{position:relative;min-height:100%;background-size:cover;background-position:center;background-color:var(--bg-alt);}
+@media(max-width:720px){.spot-media{min-height:190px;}}
+.spot-map{position:absolute;left:12px;bottom:12px;width:58px;height:58px;border-radius:10px;overflow:hidden;border:2px solid rgba(240,231,213,0.9);box-shadow:0 3px 10px rgba(0,0,0,0.5);background-repeat:no-repeat;background-size:512px 512px;background-color:var(--bg-alt);cursor:pointer;transition:transform .25s ease;display:block;}
+.spot-map:hover{transform:scale(1.1);}
+.spot-map::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:var(--terracotta);border:1.6px solid #fff;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(224,113,79,.28);}
+.spot-content{padding:22px 26px;display:flex;flex-direction:column;justify-content:center;min-width:0;}
+.spot-content .n{font-family:var(--serif);font-weight:600;font-size:17px;}
+.spot-content .reason{font-family:var(--display);font-size:14.5px;color:var(--gold-deep);margin-top:4px;}
+.spot-content .story{font-size:12.5px;color:var(--ink-soft);margin-top:11px;line-height:1.8;}
+.spot-flags{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap;}
+.flag{font-size:10.5px;padding:2px 8px;border-radius:6px;background:var(--bg-alt);color:var(--ink-soft);}
+.flag.free{background:var(--teal-soft);color:var(--teal-deep);}
+.flag.ticket{background:var(--terracotta-soft);color:var(--terracotta);}
+.flag.dress{background:var(--gold-soft);color:var(--gold-deep);}
+.spot-coord{font-size:10.5px;color:var(--ink-faint);margin-top:12px;display:inline-flex;align-items:center;gap:5px;width:fit-content;transition:color .25s;}
+.spot-coord svg{width:11px;height:11px;stroke:currentColor;}
+.spot-coord:hover{color:var(--gold-deep);}
+.food-scroll{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media(max-width:760px){.food-scroll{grid-template-columns:1fr;}}
+.food-card{padding:22px 24px;display:flex;gap:16px;align-items:flex-start;}
+.food-icon{width:38px;height:38px;border-radius:11px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;flex:none;}
+.food-icon svg{width:19px;height:19px;stroke:var(--gold-deep);}
+.food-card .n{font-family:var(--serif);font-weight:600;font-size:15px;}
+.food-card .loc{font-size:11px;color:var(--gold-deep);margin-top:2px;}
+.food-card .d{font-size:12.5px;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+.src-note{margin-top:28px;font-size:11.5px;color:var(--ink-faint);display:flex;align-items:center;gap:8px;}
+.src-note svg{width:13px;height:13px;stroke:var(--ink-faint);}
+
+.note-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media(max-width:760px){.note-grid{grid-template-columns:1fr;}}
+.note-card{padding:20px 22px;display:flex;gap:14px;}
+.note-card .ic{width:34px;height:34px;border-radius:10px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;flex:none;}
+.note-card .ic svg{width:17px;height:17px;stroke:var(--teal-deep);}
+.note-card .t{font-size:13.5px;font-weight:600;}
+.note-card .d{font-size:12.5px;color:var(--ink-soft);margin-top:5px;}
+
+.checklist-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:8px 0;}
+.check-progress-bar{height:4px;background:var(--bg-alt);border-radius:999px;overflow:hidden;margin:0 28px 4px;}
+.check-progress-fill{height:100%;background:var(--gold);width:0%;transition:width .5s ease;border-radius:999px;}
+.check-row{display:flex;align-items:center;gap:14px;padding:16px 28px;border-top:1px solid var(--line);}
+.check-row:first-of-type{border-top:none;margin-top:14px;}
+.check-row .txt{font-size:14px;}
+.check-row.done .txt{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--line-strong);}
+
+footer{margin-top:100px;padding:54px 32px calc(60px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);text-align:center;}
+footer .m{font-family:var(--serif);font-size:15px;color:var(--ink-soft);}
+footer .s{font-size:11.5px;color:var(--ink-faint);margin-top:8px;letter-spacing:.05em;}
+.backtop{position:fixed;right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));width:42px;height:42px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;z-index:90;box-shadow:var(--shadow-lift);}
+.backtop.show{opacity:1;pointer-events:auto;}
+.backtop:hover{transform:translateY(-3px);}
+.backtop svg{width:16px;height:16px;stroke:var(--bg);}
+
+/* ---------- THEME TOGGLE ---------- */
+.themetoggle{position:relative;display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);background:var(--card);cursor:pointer;flex:none;transition:border-color .3s ease,transform .3s ease,background .3s ease;}
+.themetoggle:hover{border-color:var(--gold);transform:scale(1.06);}
+.themetoggle .tt-ic{position:relative;width:19px;height:19px;display:flex;align-items:center;justify-content:center;}
+.themetoggle .tt-ic svg{position:absolute;width:19px;height:19px;transition:opacity .4s var(--ease),transform .5s var(--ease);}
+.themetoggle .i-moon{color:var(--gold-deep);opacity:1;transform:rotate(0) scale(1);}
+.themetoggle .i-sun{color:var(--gold-deep);opacity:0;transform:rotate(-70deg) scale(.6);}
+:root[data-theme="light"] .themetoggle .i-moon{opacity:0;transform:rotate(70deg) scale(.6);}
+:root[data-theme="light"] .themetoggle .i-sun{opacity:1;transform:rotate(0) scale(1);}
+:root[data-theme="light"] .themetoggle .i-sun{animation:sunrays 14s linear infinite;}
+@keyframes sunrays{to{transform:rotate(360deg);}}
+.tt-hint{position:absolute;top:calc(100% + 10px);right:0;white-space:nowrap;font-size:11.5px;color:var(--bg);background:var(--gold-deep);padding:5px 11px;border-radius:8px;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .3s ease,transform .3s ease;box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+.themetoggle:hover .tt-hint,.themetoggle:focus-visible .tt-hint{opacity:1;transform:translateY(0);}
+.themetoggle.pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--gold);animation:ttpulse 2s var(--ease) 2;}
+@keyframes ttpulse{0%{opacity:.9;transform:scale(.8);}100%{opacity:0;transform:scale(1.5);}}
+@media(max-width:640px){.tt-hint{display:none;}.themetoggle{width:34px;height:34px;}}
+
+/* ================= 移动端适配 · 简洁高级 ================= */
+@media(max-width:680px){
+  .wrap{padding:0 20px;}
+  section{padding:66px 0 8px;}
+  .section-head{margin-bottom:34px;}
+  .section-title{font-size:26px;}
+  .section-desc{font-size:13.5px;margin-top:10px;}
+  .hero{padding:124px 20px 56px;min-height:100vh;min-height:100dvh;background-position:center 46%;}
+  .hero-eyebrow{margin-bottom:20px;font-size:11px;padding:5px 12px;}
+  .hero h1{font-size:clamp(31px,9.2vw,44px);line-height:1.26;}
+  .hero-sub{font-size:14.5px;margin-top:18px;}
+  .hero-quote{font-size:17px;}
+  .hero-meta{gap:22px;margin-top:30px;}
+  .hero-meta .item .val{font-size:18px;}
+  .transit-strip{grid-template-columns:1fr;gap:9px;margin-top:26px;}
+  .transit-chip{padding:10px 12px;}
+  .ticker-wrap{margin-top:30px;}
+  .scroll-cue{left:20px;bottom:18px;}
+  .chapter-divider{padding:74px 20px 34px;}
+  .chapter-divider h2{font-size:34px;}
+  .chapter-divider .quote{font-size:17px;margin-top:14px;}
+  .chapter-stats{gap:22px;margin-top:22px;}
+  .chapter-stats .s .val{font-size:16px;}
+  .day-band{padding:28px 20px;}
+  .day-band::before{width:2px;}
+  .day-idx{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .day-idx .num{font-size:12px;}
+  .day-idx .d{font-size:27px;margin-top:0;}
+  .day-idx .m{margin-top:0;}
+  .day-idx .who{margin-top:0;order:3;}
+  .day-body .headline{gap:6px;}
+  .day-body .loc{font-size:17.5px;}
+  .day-hotel{font-size:11px;padding:3px 9px;}
+  .day-hook{font-size:14.5px;margin-bottom:12px;}
+  .kw-row{margin-bottom:14px;gap:6px;}
+  .timeline{padding-left:22px;}
+  .tl-item{font-size:13px;padding-bottom:14px;}
+  .tl-item::before{left:-22px;width:8px;height:8px;}
+  .tl-spot-card{padding:8px 10px;}
+  .tl-spot-thumb{width:38px;height:38px;}
+  .tl-spot-name{font-size:12.5px;}
+  .surf-panel{padding:26px 20px;}
+  .surf-head .t{font-size:17px;}
+  .surf-schedule{gap:0;}
+  .surf-step{min-width:88px;padding-right:10px;}
+  .surf-step .time{font-size:14px;}
+  .surf-step .label{font-size:11px;}
+  .card{padding:20px 18px;border-radius:16px;}
+  .spot-row{border-radius:16px;}
+  .spot-media{min-height:168px;}
+  .spot-content{padding:16px 18px 18px;}
+  .spot-content .n{font-size:15.5px;}
+  .spot-content .story{font-size:12px;margin-top:9px;}
+  .note-card{padding:16px 16px;}
+  .food-card{padding:18px 16px;gap:12px;}
+  .datebar{padding:0 20px 8px;}
+  .topnav{padding:11px 20px 8px;}
+  .db-day .dt{font-size:9.5px;}
+  .backtop{right:16px;bottom:16px;width:38px;height:38px;}
+  footer{margin-top:64px;padding:40px 20px 48px;}
+}
+@media(max-width:400px){
+  .hero h1{font-size:28px;}
+  .chapter-divider h2{font-size:30px;}
+  .hero-meta{gap:16px;}
+  .hero-meta .item .val{font-size:16px;}
+  .day-idx .d{font-size:24px;}
+}
+/* 横屏小屏与移动端动效减负 */
+@media(max-height:520px){
+  .hero{min-height:auto;padding:96px 20px 40px;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal,.reveal-stagger>*,.scale-in{transition-duration:.01ms;opacity:1;transform:none;}
+  .h-line>span{animation:none;transform:none;}
+  .hero-sub,.hero-quote,.hero-meta,.ticker-wrap,.transit-strip{animation:none;opacity:1;}
+  .ticker,.db-walker svg,.scroll-cue .line::after{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<svg style="display:none" aria-hidden="true">
+<symbol id="ic-doc" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 15v-2l-8-5V4.5a1.5 1.5 0 0 0-3 0V8l-8 5v2l8-2.5V17l-2.5 2v1.5l4-1 4 1V19l-2.5-2v-4.5Z"/></symbol>
+<symbol id="ic-calendar" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="ic-bed" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 18v-8a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v3"/><path d="M3 18v3M21 18v3M12 13h7a2 2 0 0 1 2 2v3M3 18h18"/></symbol>
+<symbol id="ic-wave" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M2 15c2 0 2.5-3 5-3s3 3 5 3 2.5-3 5-3 3 3 5 3M2 19c2 0 2.5-2.5 5-2.5s3 2.5 5 2.5 2.5-2.5 5-2.5 3 2.5 5 2.5"/></symbol>
+<symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></symbol>
+<symbol id="ic-cup" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M5 9h13l-1 8a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3L5 9Z"/><path d="M18 9h1.5a2 2 0 0 1 0 4H18M8 3.5c0 1-1 1.2-1 2.2M12 3.5c0 1-1 1.2-1 2.2"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></symbol>
+<symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12.5l2.5 2.5L16 9"/></symbol>
+<symbol id="ic-checksm" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12.5l4.2 4.2L19 6.5"/></symbol>
+<symbol id="ic-chevron" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="ic-up" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+<symbol id="ic-warn" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.6 18a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></symbol>
+<symbol id="ic-link" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M10 14a4 4 0 0 0 5.7 0l2.6-2.6a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0L5.7 12.6a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="ic-cloth" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M8 4 4 7l2 3 2-1.2V20h8V8.8L18 10l2-3-4-3-2 2h-4l-2-2Z"/></symbol>
+<symbol id="ic-hand" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5M11 11V4.5a1.5 1.5 0 0 1 3 0V11M14 11.5V6a1.5 1.5 0 0 1 3 0v7c0 3.5-2 6-6 6-3 0-4.5-1.5-6-4l-1.5-3a1.3 1.3 0 0 1 2.2-1.4L7 12"/></symbol>
+<symbol id="ic-flame" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3c1 3-3 4-3 8a3 3 0 0 0 6 0c0-1-.5-2-1-3 1.5 1 3 3 3 5.5a5 5 0 0 1-10 0C7 9 10 7 12 3Z"/></symbol>
+<symbol id="ic-smoke" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 20s3-16 8-16 3 8 8 8M2 20h20"/></symbol>
+<symbol id="ic-fruit" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="9" cy="14" r="5"/><circle cx="17" cy="14" r="4"/><path d="M12 6c1-2 3-3 4-2"/></symbol>
+<symbol id="ic-camera" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.4"/></symbol>
+<symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5Z"/></symbol>
+<symbol id="ic-walker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.4" r="2"/><path d="M13 6.6v5.4"/><path d="M13 8.2 9.4 10.6M13 8.2l3.6 2.1"/><path d="M13 12 10.4 18.6M13 12l2.8 5.4"/></symbol>
+</svg>
+
+<div class="fixedhead" id="fixedhead">
+  <nav class="topnav">
+    <div class="brand"><span class="dot"></span>慢渡暹罗 <span class="sub">· 2026</span></div>
+    <ul class="navlinks">
+      <li><a href="#prep" data-nav>行前准备</a></li>
+      <li><a href="#itinerary" data-nav>每日行程</a></li>
+      <li><a href="#stay" data-nav>住宿</a></li>
+      <li><a href="#guide" data-nav>灵感地图</a></li>
+      <li><a href="#notes" data-nav>须知</a></li>
+      <li><a href="#checklist" data-nav>待办</a></li>
+    </ul>
+    <button class="themetoggle pulse" id="themeToggle" aria-label="切换深浅色版本">
+      <span class="tt-ic">
+        <svg class="i-moon" viewBox="0 0 24 24"><use href="#ic-moon"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24"><use href="#ic-sun"/></svg>
+      </span>
+      <span class="tt-hint" id="themeHint">换个心情 · 浅色版</span>
+    </button>
+  </nav>
+  <div class="datebar">
+    <div class="db-inner">
+      <div class="db-line"><div class="db-fill" id="dbFill"></div></div>
+      <div class="db-walker two" id="dbWalker">
+        <div class="wset w2"><svg viewBox="0 0 24 24"><use href="#ic-walker"/></svg><svg viewBox="0 0 24 24"><use href="#ic-walker"/></svg></div>
+        <div class="wset w3"><svg viewBox="0 0 24 24"><use href="#ic-walker"/></svg><svg viewBox="0 0 24 24"><use href="#ic-walker"/></svg><svg viewBox="0 0 24 24"><use href="#ic-walker"/></svg></div>
+      </div>
+      <div class="db-days" id="dbDays"></div>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-veil"></div>
+  <div class="wrap" style="padding:0;">
+    <div class="hero-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#ic-pin"/></svg>曼谷 · 考拉 · 清迈</div>
+    <h1>
+      <span class="h-line"><span>慢渡<em>暹罗</em>，</span></span>
+      <span class="h-line"><span>寄信予<em>时光</em></span></span>
+    </h1>
+    <p class="hero-sub">从曼谷老巷弄的一杯咖啡，到考拉海浪里的一次起身，再到清迈慢慢喝完的一壶茶——每一天，都按时间顺序替你展开。</p>
+    <p class="hero-quote disp">"不赶路，不问归期——把日子，酿成一壶慢茶。"</p>
+    <div class="hero-meta">
+      <div class="item"><span class="label">旅行日期</span><div class="val serif">9.24 — 10.6</div></div>
+      <div class="item"><span class="label">总天数</span><div class="val serif"><span class="cnt" data-count="13">0</span> 天</div></div>
+      <div class="item"><span class="label">同行安排</span><div class="val serif"><span class="cnt" data-count="2">0</span> 人 → <span class="cnt" data-count="3">0</span> 人</div></div>
+      <div class="item"><span class="label">核心主题</span><div class="val serif">城市 · 海岛 · 山城</div></div>
+    </div>
+    <div class="transit-strip" id="transitStrip"></div>
+    <div class="ticker-wrap"><div class="ticker" id="tickerRow"></div></div>
+  </div>
+  <div class="scroll-cue"><div class="line"></div>沿时间轴，向下慢行</div>
+</header>
+
+<main>
+
+<section id="prep" class="wrap">
+  <div class="section-head reveal">
+    <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-doc"/></svg>Before You Go</div>
+    <h2 class="section-title serif">行前准备</h2>
+    <p class="section-desc">证件、现金、防晒、常备药——按优先级分组，出发前逐项打钩即可，进度会自动记录在本设备。</p>
+  </div>
+  <div class="prep-progress reveal">
+    <div class="ring"><svg viewBox="0 0 52 52"><circle class="bg" cx="26" cy="26" r="22"/><circle class="fg" id="prepRingFg" cx="26" cy="26" r="22" stroke-dasharray="138" stroke-dashoffset="138"/></svg><div class="pct" id="prepPct">0%</div></div>
+    <div class="info"><div class="t">物资准备进度</div><div class="s" id="prepCountText">0 / 28 已完成</div></div>
+  </div>
+  <div id="prepAccordion" class="reveal"></div>
+  <div class="local-buy reveal">
+    <div class="section-tag" style="margin-bottom:10px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:14px;height:14px;"><use href="#ic-cup"/></svg>落地后再买</div>
+    <div class="local-buy-grid" id="localBuyGrid"></div>
+  </div>
+  <div class="warning-box reveal">
+    <div class="head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-warn"/></svg><span class="t serif">避坑提醒</span></div>
+    <ul class="warning-list" id="warningList"></ul>
+  </div>
+</section>
+
+<section id="itinerary" style="padding-top:70px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-calendar"/></svg>Day by Day</div>
+      <h2 class="section-title serif">每日行程 · 时光的横切面</h2>
+      <p class="section-desc">十三天，被摊开成十三页光阴。顶部那个小小的人会陪你一路向前——你读到哪一天，他便走到哪一天。想直抵某个日子，点日期就好；也可以把单独的一天，寄给同行的人。</p>
+    </div>
+  </div>
+  <div id="chapters"></div>
+</section>
+
+<section id="stay" class="wrap">
+  <div class="section-head reveal">
+    <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-bed"/></svg>Stay</div>
+    <h2 class="section-title serif">住宿一览</h2>
+    <p class="section-desc">曼谷两段、考拉一段与清迈 Casa Sol H1 均已确认。</p>
+  </div>
+  <div class="stay-strip reveal-stagger" id="stayGrid"></div>
+</section>
+
+<section id="guide" class="wrap">
+  <div class="section-head reveal">
+    <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-camera"/></svg>Spots &amp; Eats</div>
+    <h2 class="section-title serif">灵感地图 · 速查</h2>
+    <p class="section-desc">按城市速查全部打卡点：左侧是真实影像与地理标记，右侧是推荐理由与当地的历史文化故事。</p>
+  </div>
+  <div class="guide-tabs reveal" id="guideTabs">
+    <button class="tabbtn active" data-city="bangkok">曼谷</button>
+    <button class="tabbtn" data-city="khaolak">考拉</button>
+    <button class="tabbtn" data-city="chiangmai">清迈</button>
+  </div>
+  <div id="guidePanels" class="reveal"></div>
+  <div class="src-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-book"/></svg>图片来自 Wikimedia Commons，位置数据来自 OpenStreetMap；部分文案参考小红书、Trip.com 等公开攻略整理，营业情况请到达后现场确认。</div>
+</section>
+
+<section id="notes" class="wrap">
+  <div class="section-head reveal">
+    <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-shield"/></svg>Etiquette</div>
+    <h2 class="section-title serif">注意事项</h2>
+    <p class="section-desc">文化礼仪与交通习惯，出发前过一遍即可。</p>
+  </div>
+  <div class="note-grid reveal-stagger" id="noteGrid"></div>
+</section>
+
+<section id="checklist" class="wrap">
+  <div class="section-head reveal">
+    <div class="section-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-check"/></svg>To Book</div>
+    <h2 class="section-title serif">待预订清单</h2>
+    <p class="section-desc">出发前需要闭环的预订事项，逐条勾选。</p>
+  </div>
+  <div class="checklist-panel reveal">
+    <div class="check-progress-bar"><div class="check-progress-fill" id="bookFill"></div></div>
+    <div id="bookList"></div>
+  </div>
+</section>
+
+</main>
+
+<footer><p class="m serif">慢下来，才是这次旅行的目的地</p><p class="s">慢渡暹罗 · 2026.9.24 – 10.6 · 曼谷 · 考拉 · 清迈</p></footer>
+<div class="backtop" id="backtop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-up"/></svg></div>
+
+<script>
+const TRANSIT = [
+  { fno:'CA959 · 首都T3', from:'北京', to:'曼谷 BKK', when:'9.24 18:20 抵达' },
+  { fno:'TG207 · 泰国国际', from:'曼谷', to:'普吉 HKT', when:'9.28 10:50 起飞' },
+  { fno:'VZ417', from:'考拉', to:'清迈 CNX', when:'10.1 三人会合' },
+  { fno:'夜间航班', from:'清迈', to:'北京', when:'10.6 04:40 抵达' },
+];
+const TICKER_WORDS = ['曼谷老巷弄','唐人街夜市','卧佛寺 · 郑王庙','考拉海浪','Memories Beach 冲浪','Bang Niang 落日','清迈宁曼路','帕辛寺 · 柴迪隆寺','湄甘蓬温泉','慢渡十三日'];
+
+const PACK_DATA = [
+  { level:'p0', label:'P0 · 必备', items:[
+    { name:'护照', desc:'有效期须在 6 个月以上，至少 2 页空白页，无破损。建议手机拍一份首页照片备用。', src:'self' },
+    { name:'TDAC 电子入境卡', desc:'出发前 3 天内通过 THIM APP 或 TDAC 官网免费填写，生成二维码截图保存，海关必查（谨防假冒收费网站）。', src:'self' },
+    { name:'往返机票行程单 + 酒店预订单', desc:'电子版截图存手机，国内机场值机及海关可能抽查。', src:'self' },
+    { name:'足额现金', desc:'单人携带 1 万泰铢或等值外币，家庭 2 万泰铢（海关可能抽查，只认纸币，手机余额不算）。建议国内银行提前换少量泰铢，当地 Super Rich 兑换汇率更划算。', src:'assign', srcName:'@Sean' },
+    { name:'Visa / Mastercard 信用卡', desc:'部分商场和酒店支持，作为现金备用。', src:'none' },
+    { name:'泰国电话卡', desc:'提前在淘宝买好（推荐 AIS 或 TrueMove），落地插卡即用，无需实名认证。', src:'assign', srcName:'@Sean' },
+    { name:'高倍防晒霜 + 强力驱蚊液', desc:'泰国暴晒且蚊虫多，防晒防蚊是刚需。', src:'buy' },
+    { name:'冲浪防晒装备', desc:'长袖长裤 + 脸部防晒 + 防晒霜。', src:'self' },
+    { name:'肠胃药 + 感冒药 + 晕车/晕船药', desc:'泰餐偏酸辣，室内外温差大，出海跳岛易晕，这三样是保命基础。', src:'self' },
+    { name:'短袖/薄长裤 + 薄长袖外套', desc:'户外穿短袖，但商场、飞机、大巴空调极冷，薄外套必备。', src:'self' },
+    { name:'遮肩遮膝衣物', desc:'进寺庙和皇室场所必须遮盖肩膀和膝盖，破洞牛仔裤也不行。', src:'self' },
+  ]},
+  { level:'p1', label:'P1 · 重要', items:[
+    { name:'充电宝', desc:'2 万毫安以内，必须随身携带，不能托运。', src:'self' },
+    { name:'防水手机袋', desc:'出海、玩水必备，自己带比景区买便宜。', src:'assign', srcName:'@Sean' },
+    { name:'墨镜 + 遮阳帽', desc:'物理防晒必备，也是出片神器。', src:'self' },
+    { name:'舒适运动鞋 + 拖鞋 + 沙滩袜', desc:'沙滩袜登岛防硌脚，别光脚踩岩石。', src:'self' },
+    { name:'旅行装洗面奶/护肤品', desc:'轻装上阵，用分装瓶。', src:'self' },
+    { name:'一次性内裤/浴巾/马桶垫', desc:'省心不用洗，卫生起见建议自带。', src:'assign', srcName:'@Sean' },
+    { name:'斜挎小包/防盗腰包', desc:'出门装手机、现金、证件，防偷防抢。', src:'self' },
+    { name:'密封防水袋', desc:'装湿泳衣或脏衣服，和干衣服隔开。', src:'self' },
+    { name:'折叠晴雨伞', desc:'十一仍是雨季，短时阵雨多，同时能遮阳。', src:'self' },
+  ]},
+  { level:'p2', label:'P2 · 可选', items:[
+    { name:'过滤花洒', desc:'泰国自来水水质偏硬，很多酒店水质一般，带一个过滤花洒能提升洗澡体验（多备几个滤芯）。', src:'assign', srcName:'@Sean' },
+    { name:'转换插头', desc:'泰国插座大多是两扁圆孔，三孔电器一定要带转换器。', src:'self' },
+    { name:'相机', desc:'按需带，海边和寺庙都很出片。', src:'none', srcName:'按需准备' },
+    { name:'Pocket', desc:'已采买 1 个，不计入分摊。', src:'buy', srcName:'已采买' },
+    { name:'U 型枕 + 眼罩 + 耳塞', desc:'飞机和长途车上睡觉刚需。', src:'self' },
+    { name:'便携帆布包', desc:'采购零食、伴手礼时用。', src:'self' },
+    { name:'口罩', desc:'曼谷闹市区空气污染较重，建议备着。', src:'self' },
+  ]},
+];
+const LOCAL_BUY = [
+  { n:'防晒霜 / 驱蚊液', d:'泰国 7-11 便利店或药房有售，Clear Nose 防晒、蛇牌冰凉喷雾等本地品牌效果好且便宜，可落地买。' },
+  { n:'洗漱用品', d:'很多民宿酒店不提供一次性用品，7-11 可买旅行装。' },
+  { n:'纸巾', d:'泰国纸巾偏薄，建议自带足量干湿纸巾。' },
+  { n:'肠胃药 / 止痒药膏', d:'当地药房有售，药剂师可协助推荐，但自带常用药更安心。' },
+];
+const WARNINGS = [
+  ['电子烟','严禁携带或使用：泰国查得极严，可能被罚款甚至拘留。'],
+  ['感冒药','不要携带含麻黄碱等麻醉成分的药品入境，可能违法。'],
+  ['寺庙着装','不露肩、不露膝，脱鞋进入，破洞牛仔裤也不行。'],
+  ['左手礼仪','左手被视为不洁，递东西、接东西用右手。'],
+  ['公共场合','酒店房间与公共场合禁烟，罚款很重。'],
+  ['榴莲山竹','很多酒店禁止将榴莲和山竹带入房间。'],
+];
+
+const CHAPTERS = [
+  { key:'bangkok', name:'曼谷', en:'BANGKOK', accent:'--gold', accentDeep:'--gold-deep', accentSoft:'--gold-soft', bg:'--gold',
+    quote:'金顶与老巷弄之间，藏着曼谷最真实的呼吸。', stats:[['天数','5 天'],['关键词','老街 · 寺庙 · 夜市'],['核心一天','唐人街拍照日']] },
+  { key:'khaolak', name:'考拉', en:'KHAO LAK', accent:'--teal', accentDeep:'--teal-deep', accentSoft:'--teal-soft', bg:'--teal',
+    quote:'被浪声叫醒的清晨，是这趟旅行唯一的"硬安排"。', stats:[['天数','3 天'],['关键词','冲浪 · 落日 · 躺平'],['核心一天','双人私教冲浪']] },
+  { key:'chiangmai', name:'清迈', en:'CHIANG MAI', accent:'--forest', accentDeep:'--forest-deep', accentSoft:'--forest-soft', bg:'--forest',
+    quote:'把行程留白，把日子过成一杯慢慢喝完的茶。', stats:[['天数','5 天'],['关键词','宁曼路 · 古城 · 山林'],['核心一天','三人正式会合']] },
+];
+
+const DAYS = [
+  { phase:'bangkok', idx:1, d:'9.24', m:'WED', who:'两男', loc:'北京 → 曼谷', hotel:'万豪 · 已确认',
+    hook:'落地曼谷的第一晚，只做一件事——好好休息。', kw:['落地','入境','早睡'],
+    stops:[
+      ['18:20','抵达素万那普机场 BKK（CA959，首都 T3 出发）',[]],
+      ['夜间','入境、前往酒店，简单晚餐与休息',[]],
+    ]},
+  { phase:'bangkok', idx:2, d:'9.25', m:'THU', who:'两男', loc:'Talat Noi 老街 · Yaowarat 唐人街', hotel:'万豪 · 已确认',
+    hook:'一整条河边老巷，一半是斑驳墙面，一半是咖啡香。', kw:['街头艺术','老宅咖啡','唐人街夜市'],
+    stops:[
+      ['14:00','酒店出发，Grab 前往 Talat Noi 老街',[]],
+      ['午后','街巷拍照、河边咖啡：孩童吃冰淇淋墙画、经典古董车墙、河畔巷弄都是热门取景点',['pic'],[['spot','bangkok','Talat Noi 老街'],['spot','bangkok','Song Wat']]],
+      ['15:30','Mother Roaster：老宅二楼咖啡馆，一楼是复古摩托与古董车，拍照喝咖啡两不误',['pic','eat'],[['spot','bangkok','Mother Roaster']]],
+      ['傍晚','步行至 Song Wat，继续沿河巷弄漫游',['pic']],
+      ['18:00 后','Yaowarat 唐人街夜市晚餐：粿汁、烤鱿鱼、蠔烙、烤鸭、姜汁汤圆是热门推荐 · 全程无需门票',['eat','hot'],[['food','bangkok','Yaowarat 唐人街夜市']]],
+    ]},
+  { phase:'bangkok', idx:3, d:'9.26', m:'FRI', who:'两男', loc:'卧佛寺 · 郑王庙', hotel:'金普顿玫兰 · 已确认',
+    hook:'一河两岸，一边是金身卧佛，一边是日落染红的塔尖。', kw:['卧佛寺','渡船','日落寺庙'],
+    stops:[
+      ['10:30','酒店出发，Grab / MRT 前往 Sanam Chai',[]],
+      ['上午','卧佛寺（现场购票 THB 300）· 寺庙着装遮肩过膝',['hot'],[['spot','bangkok','卧佛寺']]],
+      ['午后','Tha Tien 码头搭渡船 → 郑王庙（现场购票，预留 THB 200）',['hot'],[['spot','bangkok','郑王庙']]],
+      ['日落前','郑王庙日落时分金顶最佳，建议卡在光线最好的时段登塔拍照',['pic']],
+      ['晚间','河边晚餐，ICONSIAM 或河边酒吧',['eat'],[['spot','bangkok','ICONSIAM 河畔'],['food','bangkok','河边晚餐 / ICONSIAM']]],
+    ]},
+  { phase:'bangkok', idx:4, d:'9.27', m:'SAT', who:'两男', loc:'EmQuartier · Thonglor', hotel:'金普顿玫兰 · 已确认',
+    hook:'不赶景点的一天，商场、按摩和一顿好晚餐就够了。', kw:['商场','按摩','夜生活'],
+    stops:[
+      ['13:00','酒店出发，BTS 前往 Phrom Phong',[]],
+      ['午后','EmQuartier 商场、咖啡，自由购物',['pic']],
+      ['傍晚','按摩，为接下来的海岛冲浪养精蓄锐',[]],
+      ['晚间','Thonglor 晚餐、酒吧或自由活动 · 热门餐厅可提前订位',['eat'],[['food','bangkok','Thonglor 晚餐 & 酒吧']]],
+    ]},
+  { phase:'bangkok', idx:5, d:'9.28', m:'SUN', who:'两男', loc:'曼谷 → 普吉 → 考拉', hotel:'考拉度假村 · 已确认',
+    hook:'从摩天大楼切换到安达曼海——今天只做转场。', kw:['转场','飞行','入住泳池'],
+    stops:[
+      ['10:50','TG207 曼谷飞普吉 HKT',[]],
+      ['中午前后','提前预约车辆接机至考拉酒店（Grab 在考拉地区不稳定，机场接送均已约车）',[]],
+      ['抵达后','入住 Casa de La Flora、泳池与晚餐，不安排其他项目',[]],
+    ]},
+  { phase:'khaolak', idx:6, d:'9.29', m:'MON', who:'两男', loc:'Memories Beach 冲浪日', hotel:'考拉度假村 · 已确认', special:'surf',
+    hook:'整趟行程唯一的"硬安排"，其余时间都可以随天气与心情调整。', kw:['双人私教','Memories Beach','午后躺平'],
+    stops:[
+      ['10:00','Memories Beach 双人私教冲浪课',['hot'],[['spot','khaolak','Memories Beach']]],
+      ['午后','回酒店泳池、午睡或 SPA',[]],
+    ]},
+  { phase:'khaolak', idx:7, d:'9.30', m:'TUE', who:'两男', loc:'天气缓冲日 · Bang Niang 落日', hotel:'考拉度假村 · 已确认',
+    hook:'如果昨天浪况正好，今天就只剩发呆——Bang Niang 的日落面朝西边，是留给傍晚的仪式。', kw:['海边躺平','SPA','落日海鲜'],
+    stops:[
+      ['全天','若前日浪况不佳则改为冲浪；否则睡到自然醒',['hot']],
+      ['午后','海边躺平、SPA',[]],
+      ['日落时分','Bang Niang Beach 面朝西，是考拉看日落的经典位置',['pic'],[['spot','khaolak','Bang Niang Beach']]],
+      ['晚间','Bang Niang 海鲜晚餐，靠近 Casa de La Flora',['eat'],[['food','khaolak','Bang Niang 海鲜晚餐']]],
+    ]},
+  { phase:'khaolak', idx:8, d:'10.1', m:'WED', who:'三人会合', loc:'考拉 → 清迈', hotel:'Casa Sol H1 · 已确认',
+    hook:'两条航线在清迈交汇——从今天起，三人正式同行。', kw:['转场','会合','宁曼路晚餐'],
+    stops:[
+      ['上午','VZ417 从 HKT 飞清迈 CNX；女生从北京直飞清迈会合',[]],
+      ['下午','入住酒店',[]],
+      ['晚间','宁曼路晚餐，三人正式会合',['eat'],[['spot','chiangmai','宁曼路 · One Nimman'],['food','chiangmai','宁曼路咖啡巡礼']]],
+    ]},
+  { phase:'chiangmai', idx:9, d:'10.2', m:'THU', who:'三人', loc:'宁曼路 · One Nimman', hotel:'Casa Sol H1',
+    hook:'清迈的"文青圣地"，慢慢喝一杯拉花，逛完一整条巷子的设计小店。', kw:['咖啡巡礼','设计小店','按摩'],
+    stops:[
+      ['全天','睡到自然醒',[]],
+      ['白天','宁曼路、One Nimman，咖啡与按摩：Graph Cafe、Lot of Taste 等本地人气咖啡馆都在附近',['pic','eat'],[['spot','chiangmai','宁曼路 · One Nimman'],['food','chiangmai','宁曼路咖啡巡礼']]],
+      ['傍晚','继续闲逛设计小店与文创空间',['pic']],
+    ]},
+  { phase:'chiangmai', idx:10, d:'10.3', m:'FRI', who:'三人', loc:'帕辛寺 · 柴迪隆寺', hotel:'Casa Sol H1',
+    hook:'古城不大，走一圈就能看完兰纳风情最浓的两座寺庙。', kw:['古城','兰纳建筑','夜市'],
+    stops:[
+      ['全天','古城轻松走：帕辛寺、柴迪隆寺 · 寺庙着装遮肩过膝',['hot'],[['spot','chiangmai','帕辛寺'],['spot','chiangmai','柴迪隆寺']]],
+      ['傍晚','塔佩门红墙白鸽是古城地标，日落前光线最好',['pic'],[['spot','chiangmai','塔佩门']]],
+      ['晚间','夜市或小酒馆',['eat'],[['food','chiangmai','古城夜市小酒馆']]],
+    ]},
+  { phase:'chiangmai', idx:11, d:'10.4', m:'SAT', who:'三人', loc:'湄甘蓬半日包车', hotel:'Casa Sol H1',
+    hook:'山林与温泉资源丰富，半日包车刚好留出下午的空白。', kw:['半日包车','山林温泉','备选SPA'],
+    stops:[
+      ['半日','湄甘蓬半日包车',['pic'],[['spot','chiangmai','湄甘蓬']]],
+      ['备选','如天气不佳则改酒店 SPA 与自由活动',[]],
+    ]},
+  { phase:'chiangmai', idx:12, d:'10.5', m:'SUN', who:'三人', loc:'留白日 · 清迈 → 北京', hotel:'飞机上',
+    hook:'不排大项目的最后一天，把行李收好，把假期过完。', kw:['留白','打包','夜航'],
+    stops:[
+      ['白天','留白，不排大项目',[]],
+      ['傍晚','前往机场，晚间飞回北京',[]],
+    ]},
+  { phase:'chiangmai', idx:13, d:'10.6', m:'MON', who:'—', loc:'抵达北京', hotel:'—',
+    hook:'04:40，十三天的慢旅在首都机场落地。', kw:['抵达','行程结束'],
+    stops:[
+      ['04:40','抵达首都机场，行程结束',[]],
+    ]},
+];
+
+const STAYS = [
+  { city:'曼谷', name:'万豪', dates:'9.24 – 9.26', who:'行程内预订', status:'ok' },
+  { city:'曼谷', name:'金普顿玫兰', dates:'9.26 – 9.28', who:'行程内预订', status:'ok' },
+  { city:'普吉岛 · 考拉', name:'考拉卡塔坦尼海岸度假村（Casa de La Flora）', dates:'9.28 – 9.30', who:'行程内预订', status:'ok' },
+  { city:'清迈', name:'Casa Sol H1', dates:'10.1 – 10.5', who:'行程内预订', status:'ok', url:'https://www.airbnb.com/l/vKFiEIu2' },
+];
+
+const SPOTS = {
+  bangkok:[
+    { n:'Talat Noi 老街', reason:'曼谷最出片的市井片区之一', d:'这里曾是曼谷最早的华人聚居区，因造船与五金零件生意兴旺一时，如今老铁工厂变成了街头艺术画布——孩童吃冰淇淋的涂鸦墙、锈迹斑斑的古董车，都在诉说这条巷子的双重身世：一半是移民记忆，一半是年轻艺术家的新表达。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Talat_Noi_Street_Art.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25532/15121.png', left:91.4, top:80.6, lat:13.7334519, lon:100.5129672 },
+    { n:'Mother Roaster', reason:'反差感极强的拍照点', d:'一楼堆满等待拆解的复古摩托与老爷车零件，木质楼梯一转身却是明亮的精品咖啡馆——这种"废墟感"与"精致感"的并置，正是 Talat Noi 老宅改造潮流的缩影：旧壳子留下，新灵魂长出来。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Motorcycle_repair_shop%2C_Bangkok_(8270996736).jpg?width=900', tile:'https://tile.openstreetmap.org/15/25532/15121.png', left:86.2, top:84.8, lat:13.733, lon:100.5124 },
+    { n:'Song Wat', reason:'午后步行拍照的延伸路线', d:'紧邻 Talat Noi 的河畔老街，早年是曼谷的米行与船运仓库聚集地，泰文"Song Wat"意为"两座寺庙"，得名于街道两端的两间古寺；如今仓库外墙成了新一代咖啡馆的取景背景。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%82%E0%B8%81%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%A7%E0%B8%B2%E0%B8%94_2.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25532/15121.png', left:81.2, top:54.5, lat:13.7362352, lon:100.5118494 },
+    { n:'卧佛寺', reason:'曼谷最大卧佛所在地', d:'始建于16世纪大城王朝，是曼谷历史最悠久的寺庙之一，拉玛三世时期扩建为泰国首座"公立大学"的雏形——寺内至今保留着传统泰式按摩的教学传承，46米长的金身卧佛脚底镶嵌108块贝壳纹饰，象征佛陀的108种化身。现场购票约 THB 300。', flags:['ticket','dress'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25531/15120.png', left:15.2, top:59.4, lat:13.74638889, lon:100.49361111 },
+    { n:'郑王庙', reason:'日落时分金顶格外好看', d:'又称黎明寺，得名于郑信王当年黎明时分抵达此地建都的传说；塔身镶嵌着上万片中国瓷器碎片，是当年往来的中国商船以瓷器压船舱、卸货后碎片被寺方收集镶嵌而成——一座寺庙里藏着一段暹罗与中国的贸易史。现场购票预留 THB 200。', flags:['ticket','dress'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_view_of_Wat_Arun_in_Bangkok.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25530/15120.png', left:72.2, top:85.4, lat:13.74361111, lon:100.48888889 },
+    { n:'ICONSIAM 河畔', reason:'晚餐或酒吧的备选地', d:'2018年开业，是湄南河畔最大的商业综合体，内部复刻了泰国80余省的传统水上市场"SookSiam"，把整条河的商业史搬进了一栋建筑里——白天逛精品店，夜晚河景灯光秀准时上演。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Icon-siam-mall-bangkok-thailand.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25532/15122.png', left:67.0, top:42.7, lat:13.7268227, lon:100.5102940 },
+  ],
+  khaolak:[
+    { n:'Bang Niang Beach', reason:'考拉看日落的经典位置', d:'2004年南亚海啸重创此地后，考拉海岸重建为更安静低调的度假区——比起普吉的喧闹，这里的沙滩上散布着当年留下的警示纪念碑，游客与本地渔村生活并存，日落时分的宁静里藏着一段涅槃重生的故事。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Abraham_Bogerd_-_khao_lak_holiday-_monks_at_Bang_Niang_beach.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25326/15592.png', left:63.8, top:60.7, lat:8.6613218, lon:98.2467514 },
+    { n:'Memories Beach', reason:'冲浪教学海滩，酒店安排往返车', d:'考拉海岸线因面朝安达曼海、雨季（5-10月）浪况稳定，逐渐发展成普吉周边最受欢迎的冲浪新手教学地——比起巴厘岛的拥挤浪点，这里的教练与浪都更"私教"，酒店安排往返车直达，不依赖 Grab。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Khao_Lak_Beach%2C_Thailand.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25326/15590.png', left:6.4, top:47.4, lat:8.6844889, lon:98.2404542 },
+  ],
+  chiangmai:[
+    { n:'宁曼路 · One Nimman', reason:'清迈"文青圣地"', d:'20年前这里还只是清迈大学旁的一片稻田，2000年代起艺术家与设计师陆续入驻老屋开工作室，逐渐演变成兼具本地生活感与国际潮流感的街区——One Nimman 广场的红砖建筑刻意模仿兰纳古城风貌，是"新清迈"对"旧清迈"的一次致意。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/One_Nimman_View.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25392/14641.png', left:29.4, top:21.1, lat:18.8001262, lon:98.9680725 },
+    { n:'帕辛寺', reason:'兰纳风格古寺代表', d:'建于1345年，是兰纳王朝第五代国王为存放父王骨灰所建，"帕辛"意为"狮子佛"，寺内主殿的手绘壁画完整记录了19世纪清迈平民的日常生活场景——比起金碧辉煌的曼谷皇家寺庙，这里的木构建筑更显质朴的兰纳山地美学。', flags:['ticket','dress'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Phra_Sing%2C_Chiang_Mai_(I).jpg?width=900', tile:'https://tile.openstreetmap.org/15/25393/14642.png', left:50.5, top:35.7, lat:18.7882068, lon:98.9813773 },
+    { n:'柴迪隆寺', reason:'古城内的残缺佛塔遗迹', d:'始建于1391年，佛塔曾高达82米，是清迈古城的地理与精神中心；1545年一场大地震将塔顶震塌，从此以残缺的姿态矗立至今——泰国人相信这份"不完美"恰恰让它更接近佛法"无常"的本意，残塔比完整的塔更受本地人敬重。', flags:['ticket','dress'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25393/14642.png', left:99.7, top:45.9, lat:18.7871427, lon:98.9867840 },
+    { n:'塔佩门', reason:'清迈古城最经典地标', d:'原为14世纪古城墙的东门，历经多次战火与重建，现存的红砖城墙是1985年按原貌修复的成果；门前广场的白鸽群已成为本地人喂食的日常仪式，日落前的暖光把红砖染成蜂蜜色，是整条护城河最热闹的黄昏。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Chiang_Mai_-_East_gate_of_the_city_wall_-_0001.jpg?width=900', tile:'https://tile.openstreetmap.org/15/25394/14642.png', left:58.7, top:40.0, lat:18.7877625, lon:98.9932697 },
+    { n:'湄甘蓬', reason:'山林与温泉资源丰富', d:'一个被云雾常年笼罩的百年茶村，村民世代以炭火烘焙"甘蓬茶"（Miang）为生，整村保留着传统木屋与手作制茶技艺，2000年后转型生态旅游，成为清迈周边最容易触达的"慢山村"样本。', flags:['free'],
+      img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Khantha_Phrueksa_-_2017-07-09_(008).jpg?width=900', tile:'https://tile.openstreetmap.org/15/25427/14634.png', left:39.4, top:87.6, lat:18.8659983, lon:99.3536914 },
+  ],
+};
+const SPOT_INDEX = {};
+Object.keys(SPOTS).forEach(city=>{ SPOTS[city].forEach(s=>{ SPOT_INDEX[city+':'+s.n] = s; }); });
+
+const FOODS = {
+  bangkok:[
+    { n:'Yaowarat 唐人街夜市', loc:'曼谷', d:'曼谷最热闹的夜宵街区，粿汁、烤鱿鱼、蠔烙、烤鸭、姜汁汤圆是热门推荐，18:00 后人气渐旺。' },
+    { n:'Thonglor 晚餐 & 酒吧', loc:'曼谷', d:'时髦餐厅与小酒馆聚集地，热门餐厅建议提前订位。' },
+    { n:'河边晚餐 / ICONSIAM', loc:'曼谷', d:'湄南河景观餐厅，配郑王庙日落是当天最佳收尾。' },
+  ],
+  khaolak:[
+    { n:'Bang Niang 海鲜晚餐', loc:'考拉', d:'冲浪课后或缓冲日的晚餐去处，靠近 Casa de La Flora，落日海鲜是当地特色体验。' },
+  ],
+  chiangmai:[
+    { n:'宁曼路咖啡巡礼', loc:'清迈', d:'Graph Cafe、Lot of Taste 等本地人气咖啡馆聚集，慢节奏的咖啡馆巡礼是清迈行程的默认主线。' },
+    { n:'古城夜市小酒馆', loc:'清迈', d:'帕辛寺、柴迪隆寺周边的夜市与小酒馆，逛完古城顺路解决晚餐。' },
+  ],
+};
+const FOOD_INDEX = {};
+Object.keys(FOODS).forEach(city=>{ FOODS[city].forEach(f=>{ FOOD_INDEX[city+':'+f.n] = f; }); });
+
+const NOTES = [
+  { t:'寺庙着装', d:'不露肩、不露膝，进殿脱鞋，破洞牛仔裤也不行。', ic:'cloth' },
+  { t:'左手礼仪', d:'左手被视为不洁，递东西、接东西用右手。', ic:'hand' },
+  { t:'电子烟', d:'泰国对电子烟查得很严，携带或使用都可能被罚款甚至拘留。', ic:'flame' },
+  { t:'公共场合抽烟', d:'酒店房间与公共场合禁烟，罚款很重。', ic:'smoke' },
+  { t:'榴莲 / 山竹', d:'很多酒店禁止将榴莲和山竹带入房间。', ic:'fruit' },
+  { t:'考拉用车', d:'Grab 可用性不稳定，机场接送与冲浪往返均已提前约车，冲浪当天与司机约定好返程时间。', ic:'wave' },
+];
+const BOOKINGS = [
+  '9 月 28 日 BKK → HKT 国内航班',
+  '10 月 1 日 HKT → CNX 国内航班',
+  'Casa de La Flora，9 月 28 日入住、10 月 1 日退房',
+  'Casa ↔ Memories Beach 往返车；机场 ↔ Casa 两程接送',
+  'Memories Beach 双人私教冲浪课，优先 9 月 29 日 10:00',
+  '曼谷 9 月 24 日至 28 日住宿',
+  '清迈湄甘蓬半日包车',
+];
+
+const CHIP_LABEL = { hot:'热门', eat:'美食', pic:'拍照' };
+function el(html){ const t=document.createElement('template'); t.innerHTML=html.trim(); return t.content.firstElementChild; }
+
+function renderTransit(){
+  const grid = document.getElementById('transitStrip');
+  TRANSIT.forEach(f=>{
+    grid.appendChild(el(`<div class="transit-chip"><div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-plane"/></svg>${f.from} → ${f.to}</div><div class="w">${f.fno} · ${f.when}</div></div>`));
+  });
+}
+function renderTicker(){
+  const row = document.getElementById('tickerRow');
+  TICKER_WORDS.concat(TICKER_WORDS).forEach(w=>row.appendChild(el(`<span>${w}</span>`)));
+}
+function renderDatebar(){
+  const wrap = document.getElementById('dbDays');
+  DAYS.forEach(day=>{
+    wrap.appendChild(el(`<button class="db-day" data-day="${day.idx}" data-date="${day.d}" title="跳转到 ${day.d} ${day.loc}"><span class="node"></span><span class="dt">${day.d}</span></button>`));
+  });
+  wrap.querySelectorAll('.db-day').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const idx = parseInt(btn.getAttribute('data-day'),10);
+      const target = document.getElementById('day-'+idx);
+      if(target){ target.scrollIntoView({behavior:'smooth',block:'start'}); history.replaceState(null,'','#d'+idx); }
+    });
+  });
+}
+function renderPrep(){
+  const wrap = document.getElementById('prepAccordion');
+  let idx = 0;
+  PACK_DATA.forEach((group,gi)=>{
+    const groupEl = el(`<div class="priority-group ${group.level} ${gi===0?'open':''}">
+      <div class="priority-head" data-toggle>
+        <div class="left"><span class="priority-chip">${group.level.toUpperCase()}</span><span class="name serif">${group.label}</span></div>
+        <div style="display:flex;align-items:center;gap:10px;"><span class="count">${group.items.length} 项</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-chevron"/></svg></div>
+      </div>
+      <div class="priority-body"><div class="item-list"></div></div>
+    </div>`);
+    const list = groupEl.querySelector('.item-list');
+    group.items.forEach(item=>{
+      const myIdx = idx++;
+      const srcTxt = item.srcName || ({self:'自行准备',assign:'',buy:'当地买',none:'无需采购'}[item.src]) || '';
+      list.appendChild(el(`<div class="pack-item" data-idx="${myIdx}">
+        <div class="pack-check" data-check="${myIdx}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-checksm"/></svg></div>
+        <div class="body"><div class="name">${item.name}${srcTxt?`<span class="tag-src ${item.src}">${srcTxt}</span>`:''}</div><div class="desc">${item.desc}</div></div>
+      </div>`));
+    });
+    groupEl.querySelector('[data-toggle]').addEventListener('click',()=>groupEl.classList.toggle('open'));
+    wrap.appendChild(groupEl);
+  });
+  window.PACK_TOTAL = idx;
+}
+function renderLocalBuy(){ const grid=document.getElementById('localBuyGrid'); LOCAL_BUY.forEach(x=>grid.appendChild(el(`<div class="local-buy-item"><div class="n">${x.n}</div><div class="d">${x.d}</div></div>`))); }
+function renderWarnings(){
+  const list=document.getElementById('warningList');
+  WARNINGS.forEach((w,i)=>list.appendChild(el(`<li><span class="num">${i+1}</span><span><b>${w[0]}：</b>${w[1]}</span></li>`)));
+}
+
+function renderChapters(){
+  const root = document.getElementById('chapters');
+  CHAPTERS.forEach(ch=>{
+    const divider = el(`<div class="chapter-divider scale-in">
+      <div class="bg-num serif">${ch.en.slice(0,2)}</div>
+      <div class="inner">
+        <div class="kicker"><span class="ln"></span>${ch.en}</div>
+        <h2>${ch.name}</h2>
+        <p class="quote disp">${ch.quote}</p>
+        <div class="chapter-stats">${ch.stats.map(s=>`<div class="s"><div class="label">${s[0]}</div><div class="val serif">${s[1]}</div></div>`).join('')}</div>
+      </div>
+    </div>`);
+    divider.style.setProperty('--acc', `var(${ch.accent})`);
+    divider.style.setProperty('--acc-text', `var(${ch.accentDeep})`);
+    divider.style.setProperty('--acc-soft', `var(${ch.accentSoft})`);
+    root.appendChild(divider);
+
+    DAYS.filter(d=>d.phase===ch.key).forEach(day=>{
+      const idxStr = String(day.idx).padStart(2,'0');
+      const band = el(`<div class="day-band" id="day-${day.idx}" data-idx="${day.idx}" data-date="${day.d}" data-loc="${day.loc}">
+        <div class="day-grid">
+          <div class="day-idx">
+            <div class="num">DAY ${idxStr} / 13</div>
+            <div class="d serif">${day.d}</div>
+            <div class="m">${day.m}</div>
+            <div class="who">${day.who}</div>
+          </div>
+          <div class="day-body"></div>
+        </div>
+      </div>`);
+      band.style.setProperty('--acc', `var(${ch.accent})`);
+      band.style.setProperty('--acc-text', `var(${ch.accentDeep})`);
+      band.style.setProperty('--acc-soft', `var(${ch.accentSoft})`);
+      const body = band.querySelector('.day-body');
+      body.appendChild(el(`<div class="headline"><span class="loc serif">${day.loc}</span><span class="day-hotel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-bed"/></svg>${day.hotel}</span></div>`));
+      body.appendChild(el(`<p class="day-hook disp">${day.hook}</p>`));
+      body.appendChild(el(`<div class="kw-row">${day.kw.map(k=>`<span class="kw">#${k}</span>`).join('')}</div>`));
+
+      if(day.special==='surf'){
+        body.appendChild(el(`<div class="surf-panel">
+          <svg class="surf-wave" viewBox="0 0 500 40" preserveAspectRatio="none"><path d="M0 20 Q 25 0 50 20 T 100 20 T 150 20 T 200 20 T 250 20 T 300 20 T 350 20 T 400 20 T 450 20 T 500 20 V40 H0 Z" fill="rgba(234,255,247,.9)"/></svg>
+          <div class="surf-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-wave"/></svg><span class="t serif">Memories Beach 双人私教冲浪</span></div>
+          <p class="surf-sub">住 Casa de La Flora（Bang Niang Beach），私密度与设计感兼顾私人泳池；酒店安排往返车直达冲浪点，不依赖 Grab。</p>
+          <div class="surf-schedule">
+            <div class="surf-step"><div class="time serif">8:00</div><div class="label">起床</div></div>
+            <div class="surf-step"><div class="time serif">8:20–9:05</div><div class="label">早餐</div></div>
+            <div class="surf-step"><div class="time serif">9:15</div><div class="label">酒店出发</div></div>
+            <div class="surf-step"><div class="time serif">10:00–11:30</div><div class="label">双人私教上课</div></div>
+            <div class="surf-step"><div class="time serif">12:15</div><div class="label">午餐</div></div>
+            <div class="surf-step"><div class="time serif">13:15</div><div class="label">返程</div></div>
+          </div>
+          <div class="surf-links">
+            <a href="https://www.bettersurfthailand.com/surflesson" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-link"/></svg>Better Surf Thailand 课程页</a>
+            <a href="https://www.memoriessurfhouse.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-link"/></svg>Memories Surf House</a>
+          </div>
+          <p class="surf-note">建议提前至少一天预约，备注"如浪况不佳可顺延至 9 月 30 日"；避开 13:00–15:00 高温与强紫外线时段。</p>
+        </div>`));
+      } else {
+        const tl = el(`<div class="timeline"></div>`);
+        day.stops.forEach(s=>{
+          const chips = s[2].map(c=>`<span class="tl-chip ${c}">${CHIP_LABEL[c]}</span>`).join('');
+          const item = el(`<div class="tl-item"><span class="tag">${s[0]}</span>${s[1]}${chips?`<div class="tl-chips">${chips}</div>`:''}</div>`);
+          const refs = s[3] || [];
+          if(refs.length){
+            const listEl = el(`<div class="tl-spot-list"></div>`);
+            refs.forEach(ref=>{
+              const [type, refCity, refName] = ref;
+              const data = type==='spot' ? SPOT_INDEX[refCity+':'+refName] : FOOD_INDEX[refCity+':'+refName];
+              if(!data) return;
+              const thumb = type==='spot'
+                ? `<div class="tl-spot-thumb" style="background-image:url('${data.img}')"></div>`
+                : `<div class="tl-spot-thumb ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-cup"/></svg></div>`;
+              const sub = type==='spot' ? data.reason : data.d.slice(0,22)+'…';
+              const card = el(`<div class="tl-spot-card" data-type="${type}" data-city="${refCity}" data-name="${refName.replace(/"/g,'&quot;')}">
+                ${thumb}
+                <div class="tl-spot-body">
+                  <div class="tl-spot-name">${refName}<span class="tl-spot-tag">${type==='spot'?'景点':'美食'}</span></div>
+                  <div class="tl-spot-reason">${sub}</div>
+                </div>
+                <svg class="tl-spot-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-arrow"/></svg>
+              </div>`);
+              card.addEventListener('click',()=>jumpToGuideSpot(refCity, refName));
+              listEl.appendChild(card);
+            });
+            item.appendChild(listEl);
+          }
+          tl.appendChild(item);
+        });
+        body.appendChild(tl);
+      }
+      root.appendChild(band);
+    });
+  });
+}
+function renderStays(){
+  const grid = document.getElementById('stayGrid');
+  STAYS.forEach(s=>{
+    grid.appendChild(el(`<div class="card tilt stay-card"><div class="city">${s.city}</div><div class="hname serif">${s.url?`<a href="${s.url}" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px dotted var(--line-strong);">${s.name} ↗</a>`:s.name}</div><div class="dates">${s.dates}</div><div class="foot"><span class="who">${s.who}</span><span class="stay-status ${s.status}">${s.status==='ok'?'已确认':'待定'}</span></div></div>`));
+  });
+}
+const FLAG_LABEL = { free:'免门票', ticket:'需门票', dress:'需遮盖' };
+function slugify(city,name){ return 'g-'+city+'-'+encodeURIComponent(name).replace(/%/g,'_'); }
+function renderGuide(){
+  const panelsRoot = document.getElementById('guidePanels');
+  ['bangkok','khaolak','chiangmai'].forEach((city,i)=>{
+    const panel = el(`<div class="guide-panel ${i===0?'active':''}" data-city-panel="${city}"></div>`);
+    panel.appendChild(el(`<div class="guide-sub disp">游玩 &amp; 拍照打卡</div>`));
+    const sg = el(`<div class="spot-list"></div>`);
+    SPOTS[city].forEach(s=>{
+      const flagsHtml = s.flags.map(f=>`<span class="flag ${f}">${FLAG_LABEL[f]}</span>`).join('');
+      const mapUrl = `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=16/${s.lat}/${s.lon}`;
+      const bgX = -(s.left/100*512-29), bgY = -(s.top/100*512-29);
+      const row = el(`<div class="spot-row tilt" id="${slugify(city,s.n)}">
+        <div class="spot-media" style="background-image:url('${s.img}')">
+          <a class="spot-map" href="${mapUrl}" target="_blank" rel="noopener" style="background-image:url('${s.tile}');background-position:${bgX.toFixed(1)}px ${bgY.toFixed(1)}px;" title="在地图中查看"></a>
+        </div>
+        <div class="spot-content">
+          <div class="n serif">${s.n}</div>
+          <div class="reason disp">${s.reason}</div>
+          <div class="story">${s.d}</div>
+          <div class="spot-flags">${flagsHtml}</div>
+          <a class="spot-coord" href="${mapUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-pin"/></svg>${s.lat.toFixed(4)}, ${s.lon.toFixed(4)} · 查看地图</a>
+        </div>
+      </div>`);
+      sg.appendChild(row);
+    });
+    panel.appendChild(sg);
+    panel.appendChild(el(`<div class="guide-sub disp">饮食推荐</div>`));
+    const fg = el(`<div class="food-scroll"></div>`);
+    FOODS[city].forEach(f=>{
+      fg.appendChild(el(`<div class="card tilt food-card" id="${slugify(city,f.n)}"><div class="food-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-cup"/></svg></div><div style="flex:1;min-width:0;"><div class="n serif">${f.n}</div><div class="loc">${f.loc}</div><div class="d">${f.d}</div></div></div>`));
+    });
+    panel.appendChild(fg);
+    panelsRoot.appendChild(panel);
+  });
+}
+function jumpToGuideSpot(city, name){
+  const guideSection = document.getElementById('guide');
+  const tabBtn = document.querySelector(`#guideTabs .tabbtn[data-city="${city}"]`);
+  if(tabBtn && !tabBtn.classList.contains('active')) tabBtn.click();
+  guideSection.scrollIntoView({behavior:'smooth', block:'start'});
+  setTimeout(()=>{
+    const target = document.getElementById(slugify(city,name));
+    if(target){
+      target.scrollIntoView({behavior:'smooth', block:'center'});
+      target.classList.add('flash');
+      setTimeout(()=>target.classList.remove('flash'), 1500);
+    }
+  }, 550);
+}
+function renderNotes(){ const grid=document.getElementById('noteGrid'); NOTES.forEach(n=>grid.appendChild(el(`<div class="card tilt note-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-${n.ic}"/></svg></div><div><div class="t">${n.t}</div><div class="d">${n.d}</div></div></div>`))); }
+function renderBookings(){ const list=document.getElementById('bookList'); BOOKINGS.forEach((b,i)=>list.appendChild(el(`<div class="check-row" data-book="${i}"><div class="pack-check" data-checkb="${i}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><use href="#ic-checksm"/></svg></div><div class="txt">${b}</div></div>`))); }
+
+/* ---------- 深浅色版本切换 ---------- */
+const THEME_KEY = 'th2026_theme';
+const themeBtn = document.getElementById('themeToggle');
+const themeHint = document.getElementById('themeHint');
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  themeHint.textContent = t==='dark' ? '换个心情 · 浅色版' : '换回夜色 · 深色版';
+  themeBtn.setAttribute('aria-label', t==='dark' ? '切换到浅色版本' : '切换到深色版本');
+  try{ localStorage.setItem(THEME_KEY, t); }catch(e){}
+}
+let savedTheme = 'dark';
+try{ savedTheme = localStorage.getItem(THEME_KEY) || 'dark'; }catch(e){}
+applyTheme(savedTheme);
+themeBtn.addEventListener('click',()=>{
+  const cur = document.documentElement.getAttribute('data-theme')==='light' ? 'light' : 'dark';
+  applyTheme(cur==='light' ? 'dark' : 'light');
+  themeBtn.classList.remove('pulse');
+});
+setTimeout(()=>themeBtn.classList.remove('pulse'), 5200);
+
+renderTransit();
+renderTicker();
+renderDatebar();
+renderPrep();
+renderLocalBuy();
+renderWarnings();
+renderChapters();
+renderStays();
+renderGuide();
+renderNotes();
+renderBookings();
+
+const PREP_KEY='th2026_pack_state', BOOK_KEY='th2026_book_state';
+function loadState(key){ try{ return JSON.parse(localStorage.getItem(key))||{}; }catch(e){ return {}; } }
+function saveState(key,state){ try{ localStorage.setItem(key, JSON.stringify(state)); }catch(e){} }
+let prepState = loadState(PREP_KEY);
+function updatePrepUI(){
+  const total = window.PACK_TOTAL; const done = Object.values(prepState).filter(Boolean).length;
+  const pct = total? Math.round(done/total*100):0;
+  document.getElementById('prepPct').textContent = pct+'%';
+  document.getElementById('prepCountText').textContent = `${done} / ${total} 已完成`;
+  const c = document.getElementById('prepRingFg'); const circumference = 2*Math.PI*22;
+  c.style.strokeDasharray = circumference; c.style.strokeDashoffset = circumference - (circumference*pct/100);
+}
+document.querySelectorAll('[data-check]').forEach(box=>{
+  const idx = box.getAttribute('data-check');
+  if(prepState[idx]){ box.classList.add('checked'); box.closest('.pack-item').classList.add('done'); }
+  box.addEventListener('click',()=>{ prepState[idx]=!prepState[idx]; box.classList.toggle('checked'); box.closest('.pack-item').classList.toggle('done'); saveState(PREP_KEY,prepState); updatePrepUI(); });
+});
+updatePrepUI();
+let bookState = loadState(BOOK_KEY);
+function updateBookUI(){ const total=BOOKINGS.length; const done=Object.values(bookState).filter(Boolean).length; document.getElementById('bookFill').style.width=(total?done/total*100:0)+'%'; }
+document.querySelectorAll('[data-checkb]').forEach(box=>{
+  const idx = box.getAttribute('data-checkb');
+  if(bookState[idx]){ box.classList.add('checked'); box.closest('.check-row').classList.add('done'); }
+  box.addEventListener('click',()=>{ bookState[idx]=!bookState[idx]; box.classList.toggle('checked'); box.closest('.check-row').classList.toggle('done'); saveState(BOOK_KEY,bookState); updateBookUI(); });
+});
+updateBookUI();
+
+document.getElementById('guideTabs').addEventListener('click',(e)=>{
+  const btn = e.target.closest('.tabbtn'); if(!btn) return;
+  document.querySelectorAll('#guideTabs .tabbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const city = btn.getAttribute('data-city');
+  document.querySelectorAll('.guide-panel').forEach(p=>p.classList.toggle('active', p.getAttribute('data-city-panel')===city));
+});
+
+function animateCount(elx){
+  const target = parseInt(elx.getAttribute('data-count'),10); const dur=900; const t0=performance.now();
+  function step(t){ const p=Math.min(1,(t-t0)/dur); elx.textContent=Math.round(target*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+document.querySelectorAll('.cnt').forEach(animateCount);
+
+/* ---------- scroll effects ---------- */
+const fixedhead=document.getElementById('fixedhead'), backtop=document.getElementById('backtop'), progressBar=document.getElementById('progress-bar');
+window.addEventListener('scroll',()=>{
+  const scrolled = window.scrollY;
+  fixedhead.classList.toggle('scrolled', scrolled>30);
+  backtop.classList.toggle('show', scrolled>700);
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (h>0? scrolled/h*100:0)+'%';
+},{passive:true});
+backtop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+const navLinks = document.querySelectorAll('[data-nav]');
+const navObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id='#'+entry.target.id;
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+    }
+  });
+},{ rootMargin:'-35% 0px -55% 0px' });
+document.querySelectorAll('#prep,#itinerary,#stay,#guide,#notes,#checklist').forEach(s=>navObserver.observe(s));
+
+/* ---------- datebar walker sync ---------- */
+const dbWalker = document.getElementById('dbWalker');
+const dbFill = document.getElementById('dbFill');
+const dbBtns = Array.from(document.querySelectorAll('.db-day'));
+let currentDay = 1;
+function setWalker(idx){
+  currentDay = idx;
+  const pct = (idx-1)/(DAYS.length-1)*100;
+  dbWalker.style.left = pct+'%';
+  dbFill.style.width = pct+'%';
+  dbWalker.classList.toggle('two', idx < 8);
+  dbWalker.classList.toggle('three', idx >= 8);
+  dbBtns.forEach((b,i)=>{
+    b.classList.toggle('active', i+1===idx);
+    b.classList.toggle('past', i+1<idx);
+  });
+}
+setWalker(1);
+const dayObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      setWalker(parseInt(entry.target.getAttribute('data-idx'),10));
+    }
+  });
+},{ rootMargin:'-42% 0px -52% 0px' });
+document.querySelectorAll('.day-band').forEach(b=>dayObserver.observe(b));
+
+/* ---------- reveal on scroll ---------- */
+if('IntersectionObserver' in window){
+  const revealObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); revealObserver.unobserve(entry.target); } });
+  },{ threshold:0.12, rootMargin:'0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal, .reveal-stagger, .scale-in').forEach(elx=>revealObserver.observe(elx));
+}else{
+  document.querySelectorAll('.reveal, .reveal-stagger, .scale-in').forEach(elx=>elx.classList.add('in'));
+}
+document.querySelectorAll('.reveal-stagger>*').forEach((child,i)=>{ child.style.transitionDelay=(i%6)*0.06+'s'; });
+
+if(window.matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.tilt').forEach(cardx=>{
+    cardx.addEventListener('mousemove',(e)=>{
+      const r = cardx.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width-0.5, py=(e.clientY-r.top)/r.height-0.5;
+      cardx.style.transform=`perspective(700px) rotateX(${(-py*3.4).toFixed(2)}deg) rotateY(${(px*3.4).toFixed(2)}deg) translateY(-3px)`;
+    });
+    cardx.addEventListener('mouseleave',()=>{ cardx.style.transform=''; });
+  });
+}
+
+/* ---------- date deep-link: #9-29 / #d6 / #2026-09-29 ---------- */
+function findDayFromHash(){
+  const h = decodeURIComponent(location.hash).replace('#','').trim();
+  if(!h) return null;
+  let m = h.match(/^d(\d{1,2})$/i);
+  if(m){ const idx=parseInt(m[1],10); return DAYS.find(d=>d.idx===idx)? idx : null; }
+  m = h.match(/^(?:2026-)?(\d{1,2})[-.](\d{1,2})$/);
+  if(m){ const day = DAYS.find(d=>d.d===parseInt(m[1],10)+'.'+parseInt(m[2],10)); return day? day.idx : null; }
+  return null;
+}
+window.addEventListener('load',()=>{
+  const idx = findDayFromHash();
+  if(idx){
+    setTimeout(()=>{
+      const t = document.getElementById('day-'+idx);
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+    }, 500);
+  }
+});
+</script>
+</body>
+</html>
