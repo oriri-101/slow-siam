@@ -52,7 +52,7 @@
 :root[data-theme="light"] .chapter-divider .bg-num{opacity:.13;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.85;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
 body::before{
   content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   background-image:var(--pattern);
@@ -61,7 +61,7 @@ body::before{
 }
 a{color:inherit;text-decoration:none;}
 ::selection{background:rgba(217,165,78,0.28);color:var(--gold-deep);}
-.wrap{max-width:1060px;margin:0 auto;padding:0 32px;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 32px;width:100%;min-width:0;}
 .serif{font-family:var(--serif);}
 .disp{font-family:var(--display);font-style:italic;}
 
@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none;}
 .navlinks a.active::after{width:100%;}
 @media(max-width:900px){.navlinks{display:none;}}
 
-.datebar{padding:0 32px 10px;}
+.datebar{padding:10px 32px 10px;}
 .db-inner{position:relative;max-width:1060px;margin:0 auto;}
 .db-line{position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-strong);}
 .db-fill{position:absolute;left:0;top:0;height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .6s var(--ease);}
@@ -111,15 +111,24 @@ a{color:inherit;text-decoration:none;}
 .db-day.active .dt{color:var(--gold-deep);font-weight:600;}
 .db-day.past .node{border-color:var(--gold);background:var(--gold-soft);}
 @media(max-width:860px){
-  .datebar{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px;}
+  .datebar{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-top:10px;padding-bottom:8px;}
   .datebar::-webkit-scrollbar{display:none;}
   .db-inner{min-width:640px;}
+}
+@media(max-width:680px){
+  .datebar{padding-top:14px;padding-bottom:12px;}
+  .db-inner{min-width:840px;}
+  .db-walker{width:42px;height:20px;margin-left:-21px;top:-9px;}
+  .db-walker svg{width:16px;height:16px;}
+  .db-day .node{width:12px;height:12px;margin-top:6px;}
+  .db-day.active .node{box-shadow:0 0 0 5px rgba(217,165,78,0.2);}
+  .db-day .dt{font-size:12.5px;margin-top:2px;}
 }
 
 /* ---------- HERO ---------- */
 .hero{
   position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-  overflow:hidden;padding:150px 32px 80px;
+  overflow:hidden;padding:150px 32px 80px;width:100%;max-width:100vw;min-width:0;
   background:
     linear-gradient(180deg, rgba(14,11,9,0.62) 0%, rgba(14,11,9,0.22) 32%, rgba(14,11,9,0.34) 60%, rgba(20,17,16,0.92) 88%, var(--bg) 100%),
     linear-gradient(90deg, rgba(14,11,9,0.6) 0%, rgba(14,11,9,0.3) 46%, rgba(14,11,9,0.1) 100%),
@@ -163,8 +172,8 @@ a{color:inherit;text-decoration:none;}
 .scroll-cue .line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--gold);animation:scrolldrip 1.8s ease-in-out infinite;}
 @keyframes scrolldrip{0%{top:-100%;}100%{top:100%;}}
 
-section{padding:96px 0 10px;position:relative;}
-.section-head{margin-bottom:48px;}
+section{padding:110px 0 14px;position:relative;}
+.section-head{margin-bottom:56px;}
 .section-tag{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:14px;}
 .section-tag svg{width:16px;height:16px;stroke:var(--gold-deep);}
 .section-title{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,38px);color:var(--ink);}
@@ -235,7 +244,7 @@ section{padding:96px 0 10px;position:relative;}
 .warning-list .num{flex:none;width:20px;height:20px;border-radius:50%;background:var(--terracotta);color:var(--bg);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:1px;}
 
 /* ---------- CHAPTER DIVIDER ---------- */
-.chapter-divider{position:relative;padding:120px 32px 56px;text-align:left;overflow:hidden;}
+.chapter-divider{position:relative;padding:136px 32px 68px;text-align:left;overflow:hidden;}
 .chapter-divider .bg-num{position:absolute;top:10px;right:-1vw;font-family:var(--serif);font-weight:700;font-size:min(44vw,400px);line-height:1;z-index:0;opacity:.17;pointer-events:none;user-select:none;color:var(--acc-text,var(--gold));-webkit-text-stroke:1px rgba(217,165,78,0.10);}
 .chapter-divider .inner{position:relative;z-index:1;max-width:1060px;margin:0 auto;}
 .chapter-divider .kicker{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.18em;color:var(--acc-text,var(--gold-deep));text-transform:uppercase;margin-bottom:18px;}
@@ -247,35 +256,35 @@ section{padding:96px 0 10px;position:relative;}
 .chapter-stats .s .val{font-family:var(--serif);font-size:19px;font-weight:600;margin-top:4px;}
 
 /* ---------- DAY BAND (横切) ---------- */
-.day-band{position:relative;border-top:1px solid var(--line);padding:44px 32px;background:var(--bg);transition:background .5s ease;}
+.day-band{position:relative;border-top:1px solid var(--line);padding:66px 36px;background:var(--bg);transition:background .5s ease;}
 .day-band:nth-child(even){background:var(--bg-alt);}
 .day-band:hover{background:var(--bg-band);}
 .day-band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc,var(--gold));opacity:.75;}
 .day-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:130px 1fr;gap:32px;}
-@media(max-width:680px){.day-grid{grid-template-columns:1fr;gap:14px;}}
+@media(max-width:680px){.day-grid{grid-template-columns:1fr;gap:18px;}}
 .day-idx .num{font-family:var(--display);font-size:14px;color:var(--acc-text,var(--gold-deep));letter-spacing:.08em;}
 .day-idx .d{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--ink);line-height:1.05;margin-top:6px;}
 .day-idx .m{font-size:11px;color:var(--ink-faint);letter-spacing:.1em;margin-top:2px;}
 .day-idx .who{margin-top:14px;font-size:10.5px;color:var(--acc-text,var(--gold-deep));background:var(--acc-soft,var(--gold-soft));display:inline-block;padding:3px 10px;border-radius:999px;}
-.day-body .headline{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:8px;}
+.day-body .headline{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
 .day-body .loc{font-family:var(--serif);font-size:20px;font-weight:600;}
 .day-hotel{font-size:11.5px;color:var(--teal-deep);display:flex;align-items:center;gap:5px;background:var(--teal-soft);padding:4px 11px;border-radius:999px;white-space:nowrap;}
 .day-hotel svg{width:11px;height:11px;stroke:var(--teal-deep);}
-.day-hook{font-family:var(--display);font-size:16px;color:var(--ink-soft);margin-bottom:16px;}
-.kw-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.day-hook{font-family:var(--display);font-size:16px;color:var(--ink-soft);margin-bottom:26px;line-height:1.7;}
+.kw-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px;}
 .kw{font-size:11px;color:var(--acc-text,var(--gold-deep));background:var(--acc-soft,var(--gold-soft));padding:3px 10px;border-radius:999px;}
 .timeline{position:relative;padding-left:28px;}
 .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line-strong);}
-.tl-item{position:relative;padding-bottom:18px;font-size:13.5px;line-height:1.75;color:var(--ink);}
+.tl-item{position:relative;padding-bottom:34px;font-size:13.5px;line-height:1.95;color:var(--ink);}
 .tl-item:last-child{padding-bottom:0;}
 .tl-item::before{content:"";position:absolute;left:-28px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.6px solid var(--acc,var(--gold));}
 .tl-item .tag{display:inline-block;font-size:10.5px;color:var(--ink-faint);background:var(--bg-alt);padding:1px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;}
-.tl-chips{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
+.tl-chips{display:inline-flex;gap:6px;margin-left:8px;flex-wrap:wrap;vertical-align:middle;}
 .tl-chip{font-size:10.5px;padding:2px 8px;border-radius:6px;background:var(--bg-alt);color:var(--ink-soft);border:1px solid var(--line);}
 .tl-chip.hot{background:var(--terracotta-soft);color:var(--terracotta);border-color:transparent;}
 .tl-chip.eat{background:var(--gold-soft);color:var(--gold-deep);border-color:transparent;}
 .tl-chip.pic{background:var(--teal-soft);color:var(--teal-deep);border-color:transparent;}
-.tl-spot-list{margin-top:10px;display:flex;flex-direction:column;gap:7px;}
+.tl-spot-list{margin-top:14px;display:flex;flex-direction:column;gap:10px;}
 .tl-spot-card{display:flex;gap:12px;align-items:center;padding:9px 12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;cursor:pointer;transition:background .25s ease,border-color .25s ease,transform .25s ease;}
 .tl-spot-card:hover{background:var(--card-hi);border-color:var(--line-strong);transform:translateX(3px);}
 .tl-spot-thumb{width:42px;height:42px;border-radius:9px;background-size:cover;background-position:center;flex:none;background-color:var(--bg-alt);}
@@ -328,7 +337,7 @@ section{padding:96px 0 10px;position:relative;}
 @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 .guide-sub{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--ink-soft);margin:28px 0 14px;text-transform:uppercase;letter-spacing:.05em;font-style:normal;}
 .guide-sub:first-child{margin-top:0;}
-.spot-list{display:flex;flex-direction:column;gap:16px;}
+.spot-list{display:flex;flex-direction:column;gap:20px;}
 .spot-row{display:grid;grid-template-columns:250px 1fr;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .35s ease,transform .35s ease,border-color .35s ease;}
 .spot-row:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px);border-color:var(--line-strong);}
 @media(max-width:720px){.spot-row{grid-template-columns:1fr;}}
@@ -424,22 +433,24 @@ footer .s{font-size:11.5px;color:var(--ink-faint);margin-top:8px;letter-spacing:
   .chapter-divider .quote{font-size:17px;margin-top:14px;}
   .chapter-stats{gap:22px;margin-top:22px;}
   .chapter-stats .s .val{font-size:16px;}
-  .day-band{padding:28px 20px;}
+  .day-band{padding:44px 20px;}
   .day-band::before{width:2px;}
   .day-idx{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
   .day-idx .num{font-size:12px;}
   .day-idx .d{font-size:27px;margin-top:0;}
   .day-idx .m{margin-top:0;}
   .day-idx .who{margin-top:0;order:3;}
-  .day-body .headline{gap:6px;}
+  .day-body .headline{gap:8px;margin-bottom:16px;}
   .day-body .loc{font-size:17.5px;}
   .day-hotel{font-size:11px;padding:3px 9px;}
-  .day-hook{font-size:14.5px;margin-bottom:12px;}
-  .kw-row{margin-bottom:14px;gap:6px;}
+  .day-hook{font-size:14.5px;margin-bottom:20px;line-height:1.75;}
+  .kw-row{margin-bottom:22px;gap:7px;}
   .timeline{padding-left:22px;}
-  .tl-item{font-size:13px;padding-bottom:14px;}
+  .tl-item{font-size:13px;padding-bottom:26px;line-height:1.9;}
   .tl-item::before{left:-22px;width:8px;height:8px;}
-  .tl-spot-card{padding:8px 10px;}
+  .tl-chips{margin-left:6px;}
+  .tl-spot-list{margin-top:12px;gap:9px;}
+  .tl-spot-card{padding:9px 11px;}
   .tl-spot-thumb{width:38px;height:38px;}
   .tl-spot-name{font-size:12.5px;}
   .surf-panel{padding:26px 20px;}
@@ -456,9 +467,7 @@ footer .s{font-size:11.5px;color:var(--ink-faint);margin-top:8px;letter-spacing:
   .spot-content .story{font-size:12px;margin-top:9px;}
   .note-card{padding:16px 16px;}
   .food-card{padding:18px 16px;gap:12px;}
-  .datebar{padding:0 20px 8px;}
   .topnav{padding:11px 20px 8px;}
-  .db-day .dt{font-size:9.5px;}
   .backtop{right:16px;bottom:16px;width:38px;height:38px;}
   footer{margin-top:64px;padding:40px 20px 48px;}
 }
@@ -720,13 +729,13 @@ const CHAPTERS = [
 ];
 
 const DAYS = [
-  { phase:'bangkok', idx:1, d:'9.24', m:'WED', who:'两男', loc:'北京 → 曼谷', hotel:'万豪 · 已确认',
+  { phase:'bangkok', idx:1, d:'9.24', m:'WED', loc:'北京 → 曼谷', hotel:'万豪 · 已确认',
     hook:'落地曼谷的第一晚，只做一件事——好好休息。', kw:['落地','入境','早睡'],
     stops:[
       ['18:20','抵达素万那普机场 BKK（CA959，首都 T3 出发）',[]],
       ['夜间','入境、前往酒店，简单晚餐与休息',[]],
     ]},
-  { phase:'bangkok', idx:2, d:'9.25', m:'THU', who:'两男', loc:'Talat Noi 老街 · Yaowarat 唐人街', hotel:'万豪 · 已确认',
+  { phase:'bangkok', idx:2, d:'9.25', m:'THU', loc:'Talat Noi 老街 · Yaowarat 唐人街', hotel:'万豪 · 已确认',
     hook:'一整条河边老巷，一半是斑驳墙面，一半是咖啡香。', kw:['街头艺术','老宅咖啡','唐人街夜市'],
     stops:[
       ['14:00','酒店出发，Grab 前往 Talat Noi 老街',[]],
@@ -735,7 +744,7 @@ const DAYS = [
       ['傍晚','步行至 Song Wat，继续沿河巷弄漫游',['pic']],
       ['18:00 后','Yaowarat 唐人街夜市晚餐：粿汁、烤鱿鱼、蠔烙、烤鸭、姜汁汤圆是热门推荐 · 全程无需门票',['eat','hot'],[['food','bangkok','Yaowarat 唐人街夜市']]],
     ]},
-  { phase:'bangkok', idx:3, d:'9.26', m:'FRI', who:'两男', loc:'卧佛寺 · 郑王庙', hotel:'金普顿玫兰 · 已确认',
+  { phase:'bangkok', idx:3, d:'9.26', m:'FRI', loc:'卧佛寺 · 郑王庙', hotel:'金普顿玫兰 · 已确认',
     hook:'一河两岸，一边是金身卧佛，一边是日落染红的塔尖。', kw:['卧佛寺','渡船','日落寺庙'],
     stops:[
       ['10:30','酒店出发，Grab / MRT 前往 Sanam Chai',[]],
@@ -744,7 +753,7 @@ const DAYS = [
       ['日落前','郑王庙日落时分金顶最佳，建议卡在光线最好的时段登塔拍照',['pic']],
       ['晚间','河边晚餐，ICONSIAM 或河边酒吧',['eat'],[['spot','bangkok','ICONSIAM 河畔'],['food','bangkok','河边晚餐 / ICONSIAM']]],
     ]},
-  { phase:'bangkok', idx:4, d:'9.27', m:'SAT', who:'两男', loc:'EmQuartier · Thonglor', hotel:'金普顿玫兰 · 已确认',
+  { phase:'bangkok', idx:4, d:'9.27', m:'SAT', loc:'EmQuartier · Thonglor', hotel:'金普顿玫兰 · 已确认',
     hook:'不赶景点的一天，商场、按摩和一顿好晚餐就够了。', kw:['商场','按摩','夜生活'],
     stops:[
       ['13:00','酒店出发，BTS 前往 Phrom Phong',[]],
@@ -752,20 +761,20 @@ const DAYS = [
       ['傍晚','按摩，为接下来的海岛冲浪养精蓄锐',[]],
       ['晚间','Thonglor 晚餐、酒吧或自由活动 · 热门餐厅可提前订位',['eat'],[['food','bangkok','Thonglor 晚餐 & 酒吧']]],
     ]},
-  { phase:'bangkok', idx:5, d:'9.28', m:'SUN', who:'两男', loc:'曼谷 → 普吉 → 考拉', hotel:'考拉度假村 · 已确认',
+  { phase:'bangkok', idx:5, d:'9.28', m:'SUN', loc:'曼谷 → 普吉 → 考拉', hotel:'考拉度假村 · 已确认',
     hook:'从摩天大楼切换到安达曼海——今天只做转场。', kw:['转场','飞行','入住泳池'],
     stops:[
       ['10:50','TG207 曼谷飞普吉 HKT',[]],
       ['中午前后','提前预约车辆接机至考拉酒店（Grab 在考拉地区不稳定，机场接送均已约车）',[]],
       ['抵达后','入住 Casa de La Flora、泳池与晚餐，不安排其他项目',[]],
     ]},
-  { phase:'khaolak', idx:6, d:'9.29', m:'MON', who:'两男', loc:'Memories Beach 冲浪日', hotel:'考拉度假村 · 已确认', special:'surf',
+  { phase:'khaolak', idx:6, d:'9.29', m:'MON', loc:'Memories Beach 冲浪日', hotel:'考拉度假村 · 已确认', special:'surf',
     hook:'整趟行程唯一的"硬安排"，其余时间都可以随天气与心情调整。', kw:['双人私教','Memories Beach','午后躺平'],
     stops:[
       ['10:00','Memories Beach 双人私教冲浪课',['hot'],[['spot','khaolak','Memories Beach']]],
       ['午后','回酒店泳池、午睡或 SPA',[]],
     ]},
-  { phase:'khaolak', idx:7, d:'9.30', m:'TUE', who:'两男', loc:'天气缓冲日 · Bang Niang 落日', hotel:'考拉度假村 · 已确认',
+  { phase:'khaolak', idx:7, d:'9.30', m:'TUE', loc:'天气缓冲日 · Bang Niang 落日', hotel:'考拉度假村 · 已确认',
     hook:'如果昨天浪况正好，今天就只剩发呆——Bang Niang 的日落面朝西边，是留给傍晚的仪式。', kw:['海边躺平','SPA','落日海鲜'],
     stops:[
       ['全天','若前日浪况不佳则改为冲浪；否则睡到自然醒',['hot']],
@@ -974,7 +983,7 @@ function renderChapters(){
             <div class="num">DAY ${idxStr} / 13</div>
             <div class="d serif">${day.d}</div>
             <div class="m">${day.m}</div>
-            <div class="who">${day.who}</div>
+            ${day.who?`<div class="who">${day.who}</div>`:''}
           </div>
           <div class="day-body"></div>
         </div>
